@@ -83,7 +83,8 @@ button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px soli
 .opt-btn{padding:13px 14px;border:1.5px solid var(--border-md);border-radius:var(--r-sm);background:var(--surface);font-family:var(--fb);font-size:14.5px;font-weight:500;color:var(--ink-2);cursor:pointer;text-align:left;transition:all .25s;min-height:46px;display:flex;align-items:center;gap:10px}
 .opt-btn:hover,.opt-btn:active{border-color:var(--gold-mid);background:var(--gold-pale)}
 .opt-btn b{color:var(--gold);font-weight:800;font-size:13px;min-width:18px}
-.field-input{width:100%;padding:13px 15px;background:var(--surface);border:1.5px solid var(--border-md);border-radius:var(--r-sm);font-family:var(--fb);font-size:16px;color:var(--ink);display:block}
+.field-input{width:100%;padding:13px 15px;background:var(--surface);border:1.5px solid var(--border-md);border-radius:var(--r-sm);font-family:var(--fb);font-size:16px;color:var(--ink);display:block;min-width:0;-webkit-appearance:none;appearance:none}
+input[type=date].field-input{min-height:50px;line-height:1.2;text-align:left}
 /* REVISI: tanpa ikon resize, fokus satu garis emas lembut */
 textarea.field-input{resize:none;min-height:68px}
 textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(166,128,38,.18)}
@@ -112,7 +113,8 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .rep-field{margin-bottom:14px}
 .rep-label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink-2);margin-bottom:7px}
 .rep-radio{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.rep-radio label{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border:1.5px solid var(--border-md);border-radius:var(--r-sm);background:var(--surface);cursor:pointer;font-size:14.5px;font-weight:600}
+.rep-radio label{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;padding:14px 10px;border:1.5px solid var(--border-md);border-radius:var(--r-sm);background:var(--surface);cursor:pointer;font-size:14.5px;font-weight:600;white-space:nowrap;overflow-wrap:normal;word-break:normal;-webkit-hyphens:none;hyphens:none;text-align:center}
+.rep-radio input{flex-shrink:0;margin:0}
 .rep-radio input{accent-color:var(--gold);width:18px;height:18px}
 .rep-radio label:has(input:checked){border-color:var(--gold);background:var(--gold-pale)}
 .rep-hint{font-size:12px;color:var(--ink-4);margin-top:6px}
@@ -186,6 +188,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   .hero-title{font-size:25px}.hero{padding:28px 20px 4px;margin:-28px -20px 16px}.body{padding:24px 20px 20px}
   .bubble{max-width:calc(100% - 45px);font-size:14.5px;padding:11px 14px}.msg.user .bubble{max-width:85%}
   .chat-msgs{max-height:50vh;max-height:50dvh;padding:16px 14px}
+  .bubble.wide{padding:10px}.rep-card{padding:16px}.rep-radio{gap:8px}.rep-radio label{padding:13px 6px;gap:6px;font-size:14px}
   .opt-btn{font-size:14px;padding:12px 13px}.pain-grid{gap:8px}.pain{padding:12px}.pain b{font-size:12.5px}.pain span{font-size:11.5px}
 }
 @media (prefers-reduced-motion:reduce){.chat-section,.prog-fill{transition:none}.typing span{animation:none;opacity:.6}.chat-msgs{scroll-behavior:auto}}
@@ -218,7 +221,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
           <div class="prog-track"><div class="prog-fill" id="lc-prog" style="width:0%"></div></div>
           <div class="chat-head">
             <div class="chat-ava">🕊️</div>
-            <div class="chat-title"><h3 id="lc-chat-title">Natanael</h3><p>Asisten digital refleksi (bukan manusia)</p></div>
+            <div class="chat-title"><h3 id="lc-chat-title">PRAY</h3><p>Asisten digital</p></div>
             <button type="button" class="chat-close" id="lc-close" aria-label="Tutup chat refleksi">✕</button>
           </div>
           <div class="chat-msgs" id="lc-msgs" role="log" aria-live="polite"></div>
