@@ -218,7 +218,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
           <div class="prog-track"><div class="prog-fill" id="lc-prog" style="width:0%"></div></div>
           <div class="chat-head">
             <div class="chat-ava">🕊️</div>
-            <div class="chat-title"><h3 id="lc-chat-title">Natanael</h3><p>Asisten digital refleksi </p></div>
+            <div class="chat-title"><h3 id="lc-chat-title">Natanael</h3><p>Asisten digital refleksi (bukan manusia)</p></div>
             <button type="button" class="chat-close" id="lc-close" aria-label="Tutup chat refleksi">✕</button>
           </div>
           <div class="chat-msgs" id="lc-msgs" role="log" aria-live="polite"></div>
@@ -303,7 +303,18 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 <script>
 (function () {
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxjc8VB-ZoNOseyvOm8hYaQR5bsvU_AICAFEKS1gLU9me80YvnmJreQp4Anwd4gYzFz/exec';
-  const MAX_USE = 2, WA_BUSINESS = '6281553016909';
+
+  // ============================================================
+  // FIX: Apps Script Anda menolak request dengan "Secret tidak cocok".
+  // Isi nilai di bawah PERSIS sama dengan secret di backend
+  // (Apps Script > Project Settings > Script Properties, atau konstanta di Code.gs).
+  // Jika backend Anda memakai nama field selain "secret" (mis. "token" / "key"),
+  // ubah SECRET_FIELD di bawah.
+  // ============================================================
+  const API_SECRET = 'GANTI_DENGAN_SECRET_DI_APPS_SCRIPT';
+  const SECRET_FIELD = 'secret';
+
+  const MAX_USE = 2, WA_BUSINESS = '628595006988';
   let USER_REF = 'DIRECT';
   const HOTLINE = '119 ext. 8 (layanan kesehatan jiwa Kemenkes)';
   const CRISIS_WORDS = ['bunuh diri','mengakhiri hidup','ingin mati','tidak ingin hidup','tak ingin hidup','tidak ingin lanjut hidup','tidak mau hidup','menyakiti diri','melukai diri','akhiri hidup','lebih baik mati','capek hidup'];
@@ -340,6 +351,12 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   function track(n) { try { if (window.fbq) fbq('trackCustom', n); (window.dataLayer = window.dataLayer || []).push({ event: n }); } catch (e) {} }
   function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  // FIX: semua request ke Apps Script lewat satu fungsi yang menyisipkan secret
+  function withSecret(obj) {
+    if (API_SECRET) obj[SECRET_FIELD] = API_SECRET;
+    return obj;
+  }
 
   let started = false, busy = false, idx = 0, nama = '', tglLahir = '', penyerahan = '', crisisFlag = false, reportSent = false, R = null;
   const ans = [];
@@ -583,7 +600,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 
   function surveyString() {
     const names = R.dom.map(function (k) { return B[k].n; }).join(', ') || 'tenang';
-    return 'dominan: ' + names + ' | skor: ' + ORDER.map(function (k) { return k + '=' + R.s[k]; }).join(',') + ' | harapan=' + R.hope + ' | jawaban: ' + ans.map(function (v) { return 'ABCDE'[v]; }).join('') + (R.alert ? ' | ALERT_KRISIS' : '');
+    return 'jalur: P | dominan: ' + names + ' | skor: ' + ORDER.map(function (k) { return k + '=' + R.s[k]; }).join(',') + ' | harapan=' + R.hope + ' | jawaban: ' + ans.map(function (v) { return 'ABCDE'[v]; }).join('') + (R.alert ? ' | ALERT_KRISIS' : '');
   }
 
   function submitReport() {
@@ -599,11 +616,11 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     if (used >= MAX_USE) { reportErr('Sistem mendeteksi limit akses tercapai. Silakan coba lagi esok hari.'); return; }
 
     // Tahap 1: hanya menyimpan data, BELUM mengirim WA
-    const payload = {
+    const payload = withSecret({
       action: 'save_data',
       nama: nama, tgl_lahir: t, gender: gEl.value, wa: w,
       hasil_survey: surveyString(), jawaban_kegagalan: '', jawaban_bisikan: '', jawaban_penyerahan: penyerahan, ref: USER_REF
-    };
+    });
 
     send.disabled = true; send.innerHTML = '<span class="spin"></span> Menyimpan data...';
     fetch(SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
@@ -642,10 +659,12 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     if (waBtn) {
       waBtn.addEventListener('click', function () {
         track('LC_WhatsAppClick');
+        // FIX: keepalive agar request tetap terkirim walau tab berpindah ke WhatsApp; secret ikut dikirim
         fetch(SCRIPT_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({ action: 'trigger_send_report', wa: w, nama: nama })
+          body: JSON.stringify(withSecret({ action: 'trigger_send_report', wa: w, nama: nama })),
+          keepalive: true
         }).catch(function(err) { console.log('Trigger sent (or failed silently)', err); });
       });
     }
