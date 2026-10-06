@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>prayer.my.id - Inner Block dalam Hati</title>
+<title>prayer.my.id - Temukan Prayer Pattern &amp; Inner Block Anda</title>
+<meta name="description" content="Anda sudah berdoa. Tapi apa yang terjadi di dalam diri Anda saat menunggu jawaban Tuhan? Temukan Prayer Pattern dan Inner Block Anda dalam 3 menit.">
 <!-- FB Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -13,215 +14,244 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1078060171077411&ev=PageView&noscript=1"/></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-body{background:#f4f3f0;margin:0;padding:20px;min-height:100vh;-webkit-tap-highlight-color:transparent}
-.lc-app-root{--ink:#111116;--ink-2:#2B2B36;--ink-3:#58586F;--ink-4:#8E8EA8;--surface:#F9F8F6;--card:#FFF;--gold:#A68026;--gold-pale:#FDFBF6;--gold-mid:#CBB067;--teal:#14594A;--teal-pale:#E6F4F1;--red:#B52A2A;--red-pale:#FDF1F1;--amber:#D9822B;--amber-pale:#FFF4E5;--border:rgba(17,17,22,.08);--border-md:rgba(17,17,22,.12);--fd:'Playfair Display',Georgia,serif;--fb:'Outfit',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;--r:20px;--r-sm:12px;font-family:var(--fb);color:var(--ink);width:100%;display:flex;justify-content:center;padding:10px 0}
+/* ============================================================
+   "Menunggu fajar": ungu malam -> cahaya fajar jingga.
+   Mobile-first: ukuran font kecil & rapat, judul (H1/H2/H4) rata tengah.
+   Catatan: input tetap 16px agar iOS tidak zoom otomatis saat mengetik.
+   ============================================================ */
+body{background:#E4DFF8;margin:0;padding:20px;min-height:100vh;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+.lc-app-root{--night:#1B1248;--indigo:#4F46C8;--indigo-2:#6558E0;--ink:#1F1A45;--ink-2:#352F63;--ink-3:#5E5887;--ink-4:#8F8AB3;--mist:#F5F2FF;--paper:#FFFFFF;--dawn:#FFB454;--dawn-pale:#FFF3E0;--dawn-line:#F5A03A;--dusk-pale:#ECE8FF;--hope:#0F9D8A;--hope-pale:#DDF6F1;--rose:#E2528A;--warn:#B8610F;--warn-pale:#FFF1DF;--red:#B13A55;--red-pale:#FDECF0;--border:rgba(31,26,69,.09);--border-md:rgba(31,26,69,.15);--fd:'Newsreader',Georgia,'Times New Roman',serif;--fb:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-family:var(--fb);color:var(--ink);width:100%;display:flex;justify-content:center;padding:10px 0;font-size:14px;line-height:1.55}
 .lc-app-root *{box-sizing:border-box;margin:0;padding:0}
-.shell{width:100%;max-width:480px;background:var(--card);border-radius:24px;border:1px solid var(--border);overflow:hidden;box-shadow:0 16px 48px rgba(17,17,22,.08)}
+.shell{width:100%;max-width:440px;background:var(--paper);border-radius:22px;border:1px solid var(--border);overflow:hidden;box-shadow:0 18px 50px rgba(52,36,140,.22)}
 .prog-track{height:4px;background:var(--border);flex-shrink:0}
-.prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-mid));transition:width .6s ease-out}
-.header{padding:20px 24px 16px;text-align:center;border-bottom:1px solid var(--border)}
-.logo-name{font-family:var(--fd);font-size:26px;font-weight:800}
-.logo-sub{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink-3);margin-top:2px}
-.body{padding:28px 24px 24px}
-.hero{text-align:center;background:radial-gradient(120% 90% at 50% 0%,#FBF3DC 0%,rgba(251,243,220,0) 70%);margin:-28px -24px 18px;padding:34px 24px 6px}
-.eyebrow{display:inline-block;background:var(--gold-pale);color:var(--gold);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:6px;margin-bottom:16px;border:1px solid rgba(166,128,38,.25)}
-.hero-title{font-family:var(--fd);font-size:31px;font-weight:900;line-height:1.2;margin-bottom:14px}
-.hero-title em{font-style:normal;color:var(--gold)}
-.hero-def{font-size:14px;color:var(--ink-3);line-height:1.6;margin-bottom:6px}
-.btn-prim{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:17px 24px;background:var(--ink);color:#fff;border:none;border-radius:var(--r-sm);font-family:var(--fb);font-size:15.5px;font-weight:700;cursor:pointer;transition:all .3s;text-decoration:none}
-.btn-prim:hover{background:var(--ink-2);transform:translateY(-2px)}
-.btn-prim.gold{background:var(--gold)}
-.btn-prim.gold:hover{background:var(--gold-mid)}
-.btn-prim:disabled{background:#D6D6E0;cursor:not-allowed;transform:none}
-.hero-cta{padding:19px 24px;font-size:16.5px;box-shadow:0 10px 28px rgba(166,128,38,.28)}
-.sec-cta{margin-top:20px}
-button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid rgba(166,128,38,.45);outline-offset:2px}
-.cta-note{text-align:center;font-size:12.5px;color:var(--ink-2);margin-top:10px;line-height:1.55}
-.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
-.chip{padding:6px 12px;border-radius:20px;background:#fff;border:1px solid rgba(166,128,38,.3);font-size:12.5px;font-weight:600;color:var(--ink-2)}
-.badge-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:18px}
-.bdg{padding:6px 14px;border-radius:20px;font-size:12.5px;font-weight:700}
-.bdg-green{background:var(--teal-pale);color:var(--teal)}
-.bdg-gold{background:var(--gold-pale);color:var(--gold);border:1px solid rgba(166,128,38,.25)}
-.bdg-blue{background:#F0F4F8;color:#3A5B80}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--indigo),var(--rose),var(--dawn));transition:width .6s ease-out}
 
-.chat-section{margin-top:28px;opacity:0;max-height:0;overflow:hidden;transition:opacity .5s ease, max-height .6s ease, margin-top .4s ease}
+/* ---- Hero ---- */
+.top{background:radial-gradient(130% 60% at 50% 115%,rgba(255,170,90,.75) 0%,rgba(255,120,120,.35) 38%,rgba(255,120,120,0) 70%),linear-gradient(180deg,#1B1248 0%,#35259A 58%,#5B3DB5 100%);color:#F7F4FF;padding:0 20px 26px}
+.header{padding:16px 0 12px;text-align:center;border-bottom:1px solid rgba(247,244,255,.16)}
+.logo-name{font-family:var(--fd);font-size:21px;font-weight:700;letter-spacing:.2px}
+.logo-sub{font-size:11px;color:rgba(247,244,255,.75);margin-top:1px}
+.hero{padding-top:24px;text-align:center}
+.hero-kicker{font-size:12px;font-weight:600;color:var(--dawn);margin-bottom:10px}
+.hero-title{font-family:var(--fd);font-size:25px;font-weight:600;line-height:1.25;margin-bottom:12px;letter-spacing:-.1px;text-align:center}
+.hero-def{font-size:13.5px;color:rgba(247,244,255,.88);line-height:1.6;margin-bottom:20px}
+.btn-prim{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px 20px;background:var(--indigo);color:#fff;border:none;border-radius:999px;font-family:var(--fb);font-size:14px;font-weight:700;cursor:pointer;transition:background .25s,transform .2s;text-decoration:none}
+.btn-prim:hover{background:var(--indigo-2);transform:translateY(-1px)}
+.btn-prim.gold{background:var(--dawn);color:var(--night)}
+.btn-prim.gold:hover{background:#FFC675}
+.btn-prim:disabled{background:#D9D6EC;color:#8F8AB3;cursor:not-allowed;transform:none}
+.hero-cta{padding:15px 20px;font-size:15px;box-shadow:0 10px 28px rgba(20,8,70,.4)}
+.cta-note{font-size:11.5px;color:rgba(247,244,255,.8);margin-top:10px;line-height:1.55;text-align:center}
+.badge-row{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.bdg{padding:4px 10px;border-radius:8px;font-size:11.5px;font-weight:600;border:1px solid rgba(247,244,255,.3);color:rgba(247,244,255,.92)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid rgba(255,180,84,.8);outline-offset:2px}
+
+.body{padding:4px 20px 20px}
+
+/* ---- Chat ---- */
+.chat-section{margin-top:22px;opacity:0;max-height:0;overflow:hidden;transition:opacity .5s ease,max-height .6s ease,margin-top .4s ease}
 .chat-section:not(.open){margin-top:0}
-.chat-section.open{opacity:1;max-height:5000px;overflow:visible}
-.chat-section.open + .badge-row{margin-top:18px}
-.chat-card{background:var(--card);border-radius:var(--r);border:1px solid var(--border-md);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 8px 24px rgba(17,17,22,.06)}
-.chat-head{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--border);flex-shrink:0;background:var(--gold-pale)}
-.chat-ava{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid rgba(166,128,38,.3);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.chat-section.open{opacity:1;max-height:6000px;overflow:visible}
+.chat-card{background:var(--paper);border-radius:16px;border:1px solid var(--border-md);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 8px 24px rgba(52,36,140,.12)}
+.chat-head{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--border);flex-shrink:0;background:linear-gradient(90deg,var(--dusk-pale),var(--dawn-pale))}
+.chat-ava{width:34px;height:34px;border-radius:50%;background:#fff;border:1px solid var(--border-md);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
 .chat-title{flex:1;min-width:0}
-.chat-title h3{font-family:var(--fd);font-size:17px;font-weight:800;line-height:1.3}
-.chat-title p{font-size:11.5px;color:var(--ink-3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.chat-close{width:36px;height:36px;border-radius:50%;border:1px solid var(--border-md);background:#fff;font-size:16px;cursor:pointer;color:var(--ink-3);flex-shrink:0}
-.chat-msgs{padding:20px 16px;background:var(--surface);scroll-behavior:smooth;max-height:55vh;max-height:55dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}
-.msg{display:flex;gap:9px;margin-bottom:14px;align-items:flex-start}
+.chat-title h3{font-family:var(--fd);font-size:16px;font-weight:700;line-height:1.3}
+.chat-title p{font-size:11px;color:var(--ink-3);margin-top:0}
+.chat-close{width:32px;height:32px;border-radius:50%;border:1px solid var(--border-md);background:#fff;font-size:14px;cursor:pointer;color:var(--ink-3);flex-shrink:0}
+.chat-msgs{padding:16px 12px;background:var(--mist);scroll-behavior:smooth;max-height:55vh;max-height:55dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.msg{display:flex;gap:8px;margin-bottom:12px;align-items:flex-start}
 .msg.user{flex-direction:row-reverse}
-.msg-ava{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px}
-.msg.bot .msg-ava{background:var(--gold-pale);border:1px solid rgba(166,128,38,.3)}
-.msg.user .msg-ava{background:var(--ink);color:#fff}
-/* REVISI: hilangkan ikon hati ambigu di sisi jawaban user */
+.msg-ava{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px}
+.msg.bot .msg-ava{background:#fff;border:1px solid var(--border-md)}
 .msg.user .msg-ava{display:none}
-.bubble{max-width:calc(100% - 50px);padding:12px 15px;border-radius:16px;font-size:15px;line-height:1.6;overflow-wrap:anywhere;word-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
+.bubble{max-width:calc(100% - 44px);padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.6;overflow-wrap:anywhere;word-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
 .msg.user .bubble{max-width:85%}
-.msg.bot .bubble{background:var(--card);border:1px solid var(--border-md);border-bottom-left-radius:4px}
-.msg.user .bubble{background:var(--ink);color:#fff;border-bottom-right-radius:4px}
+.msg.bot .bubble{background:var(--paper);border:1px solid var(--border-md);border-bottom-left-radius:4px}
+.msg.user .bubble{background:linear-gradient(135deg,var(--indigo),var(--indigo-2));color:#fff;border-bottom-right-radius:4px}
 .bubble.wide{max-width:100%;width:100%}
-.bubble.greeting{background:var(--gold-pale)!important;border-color:rgba(166,128,38,.3)!important}
-.bubble.crisis{background:var(--amber-pale)!important;border-left:4px solid var(--amber)!important}
-.qn{display:block;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.typing{display:flex;gap:4px;padding:6px 4px}
-.typing span{width:7px;height:7px;background:var(--gold-mid);border-radius:50%;animation:lcT 1.2s infinite}
+.bubble.greeting{background:var(--dawn-pale)!important;border-color:var(--dawn-line)!important}
+.bubble.crisis{background:var(--warn-pale)!important;border-left:4px solid var(--warn)!important}
+.qn{display:block;font-size:12px;font-weight:700;color:var(--indigo);margin-bottom:4px}
+.typing{display:flex;gap:4px;padding:5px 3px}
+.typing span{width:6px;height:6px;background:var(--indigo-2);border-radius:50%;animation:lcT 1.2s infinite}
 .typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
 @keyframes lcT{0%,60%,100%{opacity:.3}30%{opacity:1}}
-.chat-input{padding:14px 16px;background:var(--card);border-top:1px solid var(--border);flex-shrink:0;position:sticky;bottom:0;padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}
-.opts{display:flex;flex-direction:column;gap:7px}
-.opt-btn{padding:13px 14px;border:1.5px solid var(--border-md);border-radius:var(--r-sm);background:var(--surface);font-family:var(--fb);font-size:14.5px;font-weight:500;color:var(--ink-2);cursor:pointer;text-align:left;transition:all .25s;min-height:46px;display:flex;align-items:center;gap:10px}
-.opt-btn:hover,.opt-btn:active{border-color:var(--gold-mid);background:var(--gold-pale)}
-.opt-btn b{color:var(--gold);font-weight:800;font-size:13px;min-width:18px}
-.field-input{width:100%;padding:13px 15px;background:var(--surface);border:1.5px solid var(--border-md);border-radius:var(--r-sm);font-family:var(--fb);font-size:16px;color:var(--ink);display:block;min-width:0;-webkit-appearance:none;appearance:none}
-input[type=date].field-input{min-height:50px;line-height:1.2;text-align:left}
-/* REVISI: tanpa ikon resize, fokus satu garis emas lembut */
-textarea.field-input{resize:none;min-height:68px}
-textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(166,128,38,.18)}
-.chat-input .btn-prim{margin-top:10px;padding:14px 20px;font-size:14.5px}
-.skip-btn{display:block;width:100%;background:none;border:none;color:var(--ink-3);font-family:var(--fb);font-size:13px;text-decoration:underline;cursor:pointer;padding:10px 0 2px}
-.chat-note{text-align:center;color:var(--ink-3);font-size:13px;padding:6px;line-height:1.6}
-.sum-card{background:var(--gold-pale);border:1px solid rgba(166,128,38,.3);border-radius:var(--r-sm);padding:18px}
-.sum-card h4{font-family:var(--fd);font-size:19px;font-weight:800;margin-bottom:4px}
-.sum-card .sub{font-size:12.5px;color:var(--ink-3);margin-bottom:8px}
-.sum-item{padding:10px 0;border-bottom:1px dashed rgba(166,128,38,.3);font-size:14px;color:var(--ink-2);line-height:1.6}
-.sum-item:last-child{border-bottom:none}
-.sum-item strong{display:block;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
-.sum-item .stp{display:block;margin-top:6px;color:var(--teal);font-weight:500}
-.bar-row{margin:7px 0;font-size:12.5px}
-.bar-row span{display:flex;justify-content:space-between;margin-bottom:3px}
-.bar{height:6px;background:var(--border);border-radius:4px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--gold-mid)}
-.bar.hope i{background:var(--teal)}
-.sum-card.warn{background:var(--amber-pale);border-color:var(--amber);margin-top:12px}
-.sample{margin-top:4px}
-.sample .tag{display:inline-block;font-size:11px;font-weight:700;color:var(--ink-3);background:var(--surface);border:1px solid var(--border-md);border-radius:6px;padding:3px 8px;margin-bottom:10px}
-.sample .sum-item{border-bottom:none;padding:6px 0}
-.rep-card{background:var(--card);border:1.5px solid var(--gold);border-radius:var(--r-sm);padding:20px}
-.rep-card h4{font-family:var(--fd);font-size:19px;font-weight:800;margin-bottom:6px}
-.rep-card>p{font-size:13.5px;color:var(--ink-3);line-height:1.6;margin-bottom:16px}
-.rep-field{margin-bottom:14px}
-.rep-label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink-2);margin-bottom:7px}
-.rep-radio{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.rep-radio label{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;padding:14px 10px;border:1.5px solid var(--border-md);border-radius:var(--r-sm);background:var(--surface);cursor:pointer;font-size:14.5px;font-weight:600;white-space:nowrap;overflow-wrap:normal;word-break:normal;-webkit-hyphens:none;hyphens:none;text-align:center}
-.rep-radio input{flex-shrink:0;margin:0}
-.rep-radio input{accent-color:var(--gold);width:18px;height:18px}
-.rep-radio label:has(input:checked){border-color:var(--gold);background:var(--gold-pale)}
-.rep-hint{font-size:12px;color:var(--ink-4);margin-top:6px}
-.rep-agree{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--border-md);border-radius:var(--r-sm);padding:14px;cursor:pointer;font-size:13px;line-height:1.6;color:var(--ink-2)}
-.rep-agree input{margin-top:2px;flex-shrink:0}
-.rep-err{display:none;background:var(--red-pale);color:var(--red);border:1px solid rgba(181,42,42,.2);border-radius:10px;padding:10px 12px;font-size:13px;margin-top:12px}
+.chat-input{padding:12px 14px;background:var(--paper);border-top:1px solid var(--border);flex-shrink:0;position:sticky;bottom:0;padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+.opts{display:flex;flex-direction:column;gap:6px}
+.opt-btn{padding:10px 12px;border:1.5px solid var(--border-md);border-radius:12px;background:var(--mist);font-family:var(--fb);font-size:13.5px;font-weight:500;color:var(--ink-2);cursor:pointer;text-align:left;transition:border-color .2s,background .2s;min-height:42px;display:flex;align-items:center;gap:9px}
+.opt-btn:hover,.opt-btn:active{border-color:var(--indigo);background:var(--dusk-pale)}
+.opt-btn b{color:var(--indigo);font-weight:800;font-size:12.5px;min-width:16px}
+.field-input{width:100%;padding:11px 13px;background:var(--mist);border:1.5px solid var(--border-md);border-radius:12px;font-family:var(--fb);font-size:16px;color:var(--ink);display:block;min-width:0;-webkit-appearance:none;appearance:none}
+input[type=date].field-input{min-height:46px;line-height:1.2;text-align:left}
+textarea.field-input{resize:none;min-height:62px}
+textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;border-color:var(--indigo);box-shadow:0 0 0 3px rgba(79,70,200,.2)}
+.chat-input .btn-prim{margin-top:8px;padding:12px 18px;font-size:13.5px}
+.chat-input .btn-prim:first-child{margin-top:0}
+.skip-btn{display:block;width:100%;background:none;border:none;color:var(--ink-3);font-family:var(--fb);font-size:12.5px;text-decoration:underline;cursor:pointer;padding:8px 0 2px}
+.chat-note{text-align:center;color:var(--ink-3);font-size:12.5px;padding:4px;line-height:1.55}
+
+/* ---- Hasil ---- */
+.sum-card{background:var(--mist);border:1px solid var(--border-md);border-radius:14px;padding:16px}
+.sum-card h4{font-family:var(--fd);font-size:17px;font-weight:700;margin-bottom:4px;line-height:1.3;text-align:center}
+.sum-card .sub{font-size:12px;color:var(--ink-3);margin-bottom:6px;line-height:1.55;text-align:center}
+.sum-item{padding:10px 0;border-bottom:1px solid var(--border-md);font-size:13px;color:var(--ink-2);line-height:1.6}
+.sum-item:last-child{border-bottom:none;padding-bottom:0}
+.sum-item strong{display:block;font-size:12px;font-weight:700;color:var(--indigo);margin-bottom:2px}
+.bar-row{margin:7px 0;font-size:12px}
+.bar-row span{display:flex;justify-content:space-between;gap:10px;margin-bottom:3px}
+.bar-row em{font-style:normal}
+.bar{height:6px;background:rgba(31,26,69,.1);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--indigo),var(--rose));border-radius:4px}
+.sum-card.warn{background:var(--warn-pale);border-color:var(--warn);margin-top:10px}
+.sum-card.sample{background:var(--paper)}
+.sample .tag{display:block;width:max-content;max-width:100%;margin:0 auto 10px;font-size:11.5px;font-weight:600;color:var(--ink-3);background:var(--mist);border:1px solid var(--border-md);border-radius:6px;padding:3px 8px;text-align:center}
+
+.res-card{background:var(--paper);border:1.5px solid var(--indigo);border-radius:14px;padding:16px;box-shadow:0 6px 18px rgba(79,70,200,.12)}
+.res-eyebrow{display:block;font-size:12px;font-weight:600;color:var(--ink-3);margin-bottom:3px;text-align:center}
+.res-en{font-family:var(--fd);font-size:22px;font-weight:700;line-height:1.15;color:var(--night);text-align:center}
+.res-id{font-family:var(--fd);font-style:italic;font-size:15px;color:var(--indigo);margin:2px 0 8px;text-align:center}
+.res-tag{font-size:13px;color:var(--ink-2);line-height:1.55;margin-bottom:12px;text-align:center}
+.res-block{background:var(--dawn-pale);border-left:4px solid var(--dawn-line);border-radius:4px 10px 10px 4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.5;color:var(--ink)}
+.res-block strong{display:block;font-size:12px;font-weight:700;color:var(--warn);margin-bottom:1px}
+.res-block span{font-family:var(--fd);font-size:16.5px;font-weight:600;line-height:1.35;display:block}
+.res-quote{font-family:var(--fd);font-style:italic;font-size:15.5px;line-height:1.5;color:var(--ink);padding:2px 0 12px;border-bottom:1px solid var(--border-md);margin-bottom:2px;text-align:center}
+.res-duo{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:10px}
+.res-duo div{background:var(--mist);border-radius:10px;padding:9px 11px;font-size:12px;line-height:1.5;color:var(--ink-2)}
+.res-duo strong{display:block;font-size:12px;color:var(--indigo);margin-bottom:1px}
+.tries{padding-left:18px;margin-top:3px}
+.tries li{margin-bottom:5px}
+.refl{background:var(--dusk-pale);border-radius:12px;padding:14px}
+.refl strong{display:block;text-align:center;font-size:12.5px;color:var(--indigo)}
+.refl ol{padding-left:20px;margin-top:8px}
+.refl li{margin-bottom:10px;font-family:var(--fd);font-size:15.5px;line-height:1.45;color:var(--ink)}
+.refl li:last-child{margin-bottom:0}
+.verse-card{background:radial-gradient(120% 70% at 50% 120%,rgba(255,150,100,.5) 0%,rgba(255,150,100,0) 70%),linear-gradient(180deg,#1B1248 0%,#35259A 100%);color:#F7F4FF;border-radius:14px;padding:18px;text-align:center}
+.verse-card .lead{font-size:12px;color:rgba(247,244,255,.8);margin-bottom:8px;line-height:1.5}
+.verse-card blockquote{font-family:var(--fd);font-style:italic;font-size:16.5px;line-height:1.5}
+.verse-card cite{display:block;font-family:var(--fb);font-style:normal;font-size:12.5px;font-weight:700;color:var(--dawn);margin-top:8px}
+
+/* ---- Formulir laporan ---- */
+.rep-card{background:var(--paper);border:1.5px solid var(--indigo);border-radius:14px;padding:16px}
+.rep-card h4{font-family:var(--fd);font-size:17px;font-weight:700;margin-bottom:5px;line-height:1.3;text-align:center}
+.rep-card>p{font-size:12.5px;color:var(--ink-3);line-height:1.55;margin-bottom:14px;text-align:center}
+.rep-field{margin-bottom:12px}
+.rep-label{display:block;font-size:12px;font-weight:700;color:var(--ink-2);margin-bottom:6px}
+.rep-radio{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rep-radio label{display:flex;align-items:center;justify-content:center;gap:7px;min-width:0;padding:11px 8px;border:1.5px solid var(--border-md);border-radius:12px;background:var(--mist);cursor:pointer;font-size:13.5px;font-weight:600;white-space:nowrap;text-align:center}
+.rep-radio input{flex-shrink:0;margin:0;accent-color:var(--indigo);width:17px;height:17px}
+.rep-radio label:has(input:checked){border-color:var(--indigo);background:var(--dusk-pale)}
+.rep-hint{font-size:11.5px;color:var(--ink-4);margin-top:5px}
+.rep-agree{display:flex;gap:10px;align-items:flex-start;background:var(--mist);border:1px solid var(--border-md);border-radius:12px;padding:12px;cursor:pointer;font-size:12px;line-height:1.55;color:var(--ink-2)}
+.rep-agree input{margin-top:2px;flex-shrink:0;accent-color:var(--indigo)}
+.rep-err{display:none;background:var(--red-pale);color:var(--red);border:1px solid rgba(177,58,85,.25);border-radius:10px;padding:9px 11px;font-size:12.5px;margin-top:10px}
 .rep-err.on{display:block}
-.rep-send{display:none;margin-top:14px}
+.rep-send{display:none;margin-top:12px}
 .rep-send.on{display:flex}
 .done{text-align:center}
-.done-check{width:60px;height:60px;background:var(--teal-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--teal);font-size:28px}
-.done h4{font-family:var(--fd);font-size:20px;font-weight:800;margin-bottom:6px}
-.done p{font-size:14px;color:var(--ink-3);line-height:1.6;margin-bottom:14px}
-.wa-btn{background:#128C7E!important}
-.must-click{text-align:left;background:var(--amber-pale);border:1px solid var(--amber);border-radius:var(--r-sm);padding:12px 14px;font-size:13px;line-height:1.6;color:#7A4A10;margin-top:14px}
-.ig-cta{margin-top:20px;padding:16px;background:var(--gold-pale);border-radius:var(--r-sm);border:1px solid rgba(166,128,38,0.3);text-align:center}
-.ig-cta p{font-size:13px;color:var(--ink-2);margin-bottom:10px}
-.ig-link{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-weight:700;text-decoration:none;font-size:15px;transition:all .2s}
-.ig-link:hover{color:var(--gold-mid);transform:translateY(-1px)}
-.spin{width:20px;height:20px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:lcS .8s linear infinite}
+.done-check{width:52px;height:52px;background:var(--hope-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:var(--hope);font-size:24px}
+.done h4{font-family:var(--fd);font-size:18px;font-weight:700;margin-bottom:5px;text-align:center}
+.done p{font-size:13px;color:var(--ink-3);line-height:1.55;margin-bottom:12px}
+.wa-btn{background:#128C7E!important;color:#fff!important}
+.must-click{text-align:left;background:var(--warn-pale);border:1px solid var(--warn);border-radius:12px;padding:10px 12px;font-size:12px;line-height:1.55;color:#6B3E0B;margin-top:12px}
+.ig-cta{margin-top:16px;padding:14px;background:var(--mist);border-radius:12px;border:1px solid var(--border-md);text-align:center}
+.ig-cta p{font-size:12.5px;color:var(--ink-2);margin-bottom:8px}
+.ig-link{display:inline-flex;align-items:center;gap:8px;color:var(--indigo);font-weight:700;text-decoration:none;font-size:14px}
+.spin{width:18px;height:18px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:lcS .8s linear infinite}
 @keyframes lcS{to{transform:rotate(360deg)}}
-.sec{margin-top:36px;padding-top:30px;border-top:1px solid var(--border)}
-.sec-title{font-family:var(--fd);font-size:22px;font-weight:800;text-align:center;line-height:1.3;margin-bottom:6px}
-.sec-sub{font-size:13.5px;color:var(--ink-3);text-align:center;line-height:1.6;margin-bottom:20px}
-.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.pain{border:1px solid var(--border-md);border-radius:var(--r-sm);padding:14px}
-.pain b{display:block;font-size:13.5px;margin-bottom:3px}
-.pain span{font-size:12px;color:var(--ink-3);line-height:1.5;display:block}
-.quote-block{margin-top:24px;text-align:center;background:var(--gold-pale);border-radius:var(--r-sm);padding:22px 18px;font-family:var(--fd);font-size:16.5px;font-style:italic;color:var(--ink-2);line-height:1.6}
-.quote-block span{display:block;font-family:var(--fb);font-style:normal;font-size:12px;font-weight:700;color:var(--gold);margin-top:8px}
-.steps{display:flex;flex-direction:column;gap:12px}
-.step{display:flex;gap:14px;padding:16px;border:1px solid var(--border-md);border-radius:var(--r-sm)}
-.step>span{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--fd);font-weight:800;display:flex;align-items:center;justify-content:center}
-.step b{display:block;font-size:14.5px;margin-bottom:2px}
-.step p{font-size:12.5px;color:var(--ink-3);line-height:1.6}
-.trust{font-size:12.5px;color:var(--ink-3);line-height:1.6;text-align:center;margin-top:14px}
-.about{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--surface);border:1px solid var(--border-md);border-radius:var(--r-sm);padding:28px 20px}
-.about-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-mid);padding:3px;background:var(--card);box-shadow:0 6px 16px rgba(166,128,38,0.12);margin-bottom:18px}
+
+/* ---- Bagian landing ---- */
+.sec{margin-top:30px;padding-top:26px;border-top:1px solid var(--border)}
+.sec-title{font-family:var(--fd);font-size:21px;font-weight:600;line-height:1.28;margin-bottom:6px;letter-spacing:-.1px;text-align:center}
+.sec-sub{font-size:13px;color:var(--ink-3);line-height:1.6;margin-bottom:18px;text-align:center}
+.mirror{background:linear-gradient(180deg,var(--dawn-pale),#FFFFFF);border:1px solid rgba(245,160,58,.35);border-radius:12px;padding:14px 16px;margin-bottom:10px;font-family:var(--fd);font-size:16.5px;line-height:1.45;color:var(--ink);text-align:center}
+.mirror:last-of-type{margin-bottom:0}
+.scripture{margin-top:22px;padding:16px;background:linear-gradient(135deg,var(--dusk-pale),#F7EEFF);border-radius:14px;font-family:var(--fd);font-style:italic;font-size:16px;line-height:1.5;color:var(--ink-2);text-align:center}
+.scripture span{display:block;font-family:var(--fb);font-style:normal;font-size:12px;font-weight:700;color:var(--indigo);margin-top:6px}
+.pat-list{display:flex;flex-direction:column}
+.pat{padding:12px 0;border-bottom:1px solid var(--border-md);text-align:center}
+.pat:first-child{padding-top:0}
+.pat:last-child{border-bottom:none;padding-bottom:0}
+.pat b{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--night);display:block}
+.pat i{font-family:var(--fd);font-size:14px;color:var(--indigo);display:block;margin-top:1px}
+.pat p{font-size:12.5px;color:var(--ink-3);line-height:1.55;margin-top:3px}
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:12px;padding:13px;border:1px solid var(--border-md);border-radius:12px;background:var(--mist)}
+.step>span{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--indigo),var(--rose));color:#fff;font-family:var(--fd);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center}
+.step b{display:block;font-size:13.5px;margin-bottom:1px}
+.step p{font-size:12px;color:var(--ink-3);line-height:1.55}
+.trust{font-size:12px;color:var(--ink-3);line-height:1.55;margin-top:12px;text-align:center}
+.sec-cta{margin-top:16px}
+.about{display:flex;flex-direction:column;align-items:center;background:var(--mist);border:1px solid var(--border-md);border-radius:14px;padding:22px 16px}
+.about-photo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--dawn-line);padding:3px;background:var(--paper);margin-bottom:14px}
 .about-text{text-align:left;width:100%}
-.about-text p{font-size:14px;color:var(--ink-3);line-height:1.7;margin-bottom:10px}
+.about-text p{font-size:13px;color:var(--ink-3);line-height:1.65;margin-bottom:8px}
 .about-text p:last-child{margin-bottom:0}
 .about-text strong{color:var(--ink)}
-.about-disclaimer{font-size:12px!important;color:var(--ink-4)!important;font-style:italic;margin-top:14px!important;padding-top:14px!important;border-top:1px solid var(--border)!important;line-height:1.5!important}
-.tl{margin-top:26px}
-.tl-title{font-family:var(--fd);font-size:21px;font-weight:800;text-align:center;margin-bottom:4px}
-.tl-sub{font-size:12.5px;color:var(--ink-3);text-align:center;margin-bottom:22px}
-.tl-list{list-style:none;position:relative;padding-left:48px}
-.tl-list::before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:linear-gradient(var(--gold),var(--border-md))}
-.tl-list li{position:relative;margin-bottom:14px}
-.tl-num{position:absolute;left:-48px;top:10px;width:40px;height:40px;border-radius:50%;background:var(--card);border:2px solid var(--gold);color:var(--gold);font-family:var(--fd);font-weight:900;display:flex;align-items:center;justify-content:center}
-.tl-list li:last-child .tl-num{background:var(--gold);color:#fff}
-.tl-card{background:var(--surface);border:1px solid var(--border-md);border-radius:var(--r-sm);padding:14px 16px}
-.tl-tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
-.tl-card b{display:block;font-size:14.5px;margin-bottom:3px}
-.tl-card p{font-size:12.5px;color:var(--ink-3);line-height:1.6}
-.tl-quote{margin-top:22px;text-align:center;padding:20px 16px;background:var(--gold-pale);border:1px solid rgba(166,128,38,.3);border-radius:var(--r-sm);font-family:var(--fd);font-style:italic;font-size:17px;line-height:1.55;color:var(--ink-2)}
-.tl-quote span{display:block;margin-top:8px;font-family:var(--fb);font-style:normal;font-size:12px;font-weight:700;color:var(--gold)}
-.legal-disclaimer{font-size:11px;color:var(--ink-4);line-height:1.65;text-align:center;margin-top:16px}
+.about-disclaimer{font-size:11.5px!important;color:var(--ink-4)!important;font-style:italic;margin-top:12px!important;padding-top:12px!important;border-top:1px solid var(--border)!important;line-height:1.5!important}
+.tl{margin-top:22px}
+.tl-title{font-family:var(--fd);font-size:20px;font-weight:600;margin-bottom:3px;text-align:center}
+.tl-sub{font-size:12px;color:var(--ink-3);margin-bottom:18px;line-height:1.55;text-align:center}
+.tl-list{list-style:none;position:relative;padding-left:44px}
+.tl-list::before{content:"";position:absolute;left:17px;top:18px;bottom:18px;width:2px;background:linear-gradient(var(--dawn-line),var(--indigo-2))}
+.tl-list li{position:relative;margin-bottom:12px}
+.tl-num{position:absolute;left:-44px;top:8px;width:36px;height:36px;border-radius:50%;background:var(--paper);border:2px solid var(--dawn-line);color:var(--night);font-family:var(--fd);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.tl-list li:last-child .tl-num{background:var(--dawn)}
+.tl-card{background:var(--mist);border:1px solid var(--border-md);border-radius:12px;padding:11px 13px}
+.tl-tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--indigo);margin-bottom:2px}
+.tl-card b{display:block;font-size:13.5px;margin-bottom:2px}
+.tl-card p{font-size:12px;color:var(--ink-3);line-height:1.55}
+.tl-quote{margin-top:18px;padding:16px 14px;background:var(--dawn-pale);border:1px solid var(--dawn-line);border-radius:12px;font-family:var(--fd);font-style:italic;font-size:16px;line-height:1.5;color:var(--ink-2);text-align:center}
+.tl-quote span{display:block;margin-top:6px;font-family:var(--fb);font-style:normal;font-size:12px;font-weight:700;color:var(--warn)}
+.legal-disclaimer{font-size:11px;color:var(--ink-4);line-height:1.6;text-align:center;margin-top:14px}
 .legal-disclaimer strong{color:var(--ink-3)}
-.shell>.body>.legal-disclaimer{margin-bottom:64px}
+.shell>.body>.legal-disclaimer:last-child{margin-bottom:60px}
+.chatting .sec{opacity:.3;transition:opacity .4s}
 
-/* REVISI: redupkan konten di bawah chat saat kuis aktif */
-.chatting .sec,.chatting .quote-block{opacity:.3;transition:opacity .4s}
-
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:9999;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--border);transform:translateY(110%);visibility:hidden;transition:transform .35s,visibility 0s .35s}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:9999;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--border);transform:translateY(110%);visibility:hidden;transition:transform .35s,visibility 0s .35s}
 .sticky.show{transform:none;visibility:visible;transition-delay:0s}
-.sticky .btn-prim{max-width:448px;margin:0 auto;padding:14px 20px;font-size:15px}
+.sticky .btn-prim{max-width:408px;margin:0 auto;padding:12px 18px;font-size:14px}
 
 @media (max-width:520px){
-  body{padding:0}.lc-app-root{padding:0}.shell{border-radius:0;border-left:none;border-right:none}
-  .hero-title{font-size:25px}.hero{padding:28px 20px 4px;margin:-28px -20px 16px}.body{padding:24px 20px 20px}
-  .bubble{max-width:calc(100% - 45px);font-size:14.5px;padding:11px 14px}.msg.user .bubble{max-width:85%}
-  .chat-msgs{max-height:50vh;max-height:50dvh;padding:16px 14px}
-  .bubble.wide{padding:10px}.rep-card{padding:16px}.rep-radio{gap:8px}.rep-radio label{padding:13px 6px;gap:6px;font-size:14px}
-  .opt-btn{font-size:14px;padding:12px 13px}.pain-grid{gap:8px}.pain{padding:12px}.pain b{font-size:12.5px}.pain span{font-size:11.5px}
+  body{padding:0}.lc-app-root{padding:0}.shell{border-radius:0;border-left:none;border-right:none;max-width:100%}
+  .top{padding:0 16px 22px}.hero-title{font-size:23px}.body{padding:4px 16px 18px}
+  .bubble{max-width:calc(100% - 40px);font-size:13.5px;padding:9px 12px}.msg.user .bubble{max-width:88%}
+  .chat-msgs{max-height:52vh;max-height:52dvh;padding:14px 10px}
+  .bubble.wide{padding:8px}.rep-card{padding:14px}.rep-radio{gap:8px}.rep-radio label{padding:11px 6px;gap:6px;font-size:13px}
+  .opt-btn{font-size:13px;padding:10px 11px}.res-duo{grid-template-columns:1fr}
+  .sec-title{font-size:19.5px}.res-en{font-size:20px}
 }
 @media (prefers-reduced-motion:reduce){.chat-section,.prog-fill{transition:none}.typing span{animation:none;opacity:.6}.chat-msgs{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <div class="lc-app-root" id="lifecode-root">
-  <div class="sticky" id="lc-sticky"><button type="button" class="btn-prim gold" onclick="LC.open()">Lihat Peta Hati Saya (5 menit)</button></div>
+  <div class="sticky" id="lc-sticky"><button type="button" class="btn-prim gold" onclick="LC.open()">Temukan Prayer Pattern Saya (3 menit)</button></div>
   <div class="shell">
     <div class="prog-track"><div class="prog-fill" style="width:100%"></div></div>
-    <div class="header"><div class="logo-name">prayer.my.id</div><div class="logo-sub">Clear Heart &amp; Mind</div></div>
-    <div class="body">
-      <!-- 1. Hero + ajakan utama -->
+
+    <div class="top">
+      <div class="header"><div class="logo-name">prayer.my.id</div><div class="logo-sub">Prayer Pattern &amp; Inner Block</div></div>
       <div class="hero">
-        <div class="eyebrow">Refleksi Rohani 5 Menit</div>
-        <h1 class="hero-title">Doa terasa sulit? Mungkin ada <em>Inner Block</em> di hati Anda.</h1>
-        <p class="hero-def">Inner Block adalah perasaan yang tersimpan dan diam-diam menahan Anda berdoa dengan lega.</p>
+        <p class="hero-kicker">Refleksi doa, 3 menit</p>
+        <h1 class="hero-title">Anda sudah berdoa. Tapi apa yang sebenarnya terjadi di dalam diri Anda ketika menunggu jawaban Tuhan?</h1>
+        <p class="hero-def">Temukan Prayer Pattern dan Inner Block Anda: pola batin yang diam-diam memengaruhi cara Anda berdoa, berharap, dan menunggu.</p>
+        <button id="lc-start" class="btn-prim gold hero-cta" type="button" onclick="LC.open()">Temukan Prayer Pattern Saya (3 menit)</button>
+        <p class="cta-note">Gratis, tanpa daftar akun, jawaban Anda rahasia.<br>Refleksi rohani, bukan diagnosis atau pengganti tenaga profesional.</p>
+        <div class="badge-row" id="lc-badges"><span class="bdg">100% gratis</span><span class="bdg">10 pernyataan</span><span class="bdg">Hasil seketika</span></div>
       </div>
-      <button id="lc-start" class="btn-prim gold hero-cta" type="button" onclick="LC.open()">Lihat Peta Hati Saya (5 menit)</button>
-      <p class="cta-note"><strong>Gratis · tanpa daftar akun · jawaban Anda rahasia<br>Refleksi edukatif, bukan diagnosis atau pengganti tenaga profesional.</strong></p>
+    </div>
 
-
-      <!-- 2. Kepercayaan -->
-      <div class="badge-row" id="lc-badges"><span class="bdg bdg-green">✓ 100% Gratis</span><span class="bdg bdg-gold">Peta Hati Pribadi</span><span class="bdg bdg-blue">🔒 Rahasia</span></div>
-
-
-      <!-- 3. Chat kuis (membuka di sini) -->
+    <div class="body">
+      <!-- Chat kuis (membuka di sini) -->
       <div class="chat-section" id="lc-chat-section" role="region" aria-labelledby="lc-chat-title" aria-hidden="true">
         <div class="chat-card">
           <div class="prog-track"><div class="prog-fill" id="lc-prog" style="width:0%"></div></div>
           <div class="chat-head">
             <div class="chat-ava">🕊️</div>
-            <div class="chat-title"><h3 id="lc-chat-title">PRAY</h3><p>Asisten digital</p></div>
+            <div class="chat-title"><h3 id="lc-chat-title">PRAY</h3><p>Pendamping refleksi digital</p></div>
             <button type="button" class="chat-close" id="lc-close" aria-label="Tutup chat refleksi">✕</button>
           </div>
           <div class="chat-msgs" id="lc-msgs" role="log" aria-live="polite"></div>
@@ -229,53 +259,56 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         </div>
       </div>
 
-
-      <!-- 4. Relevansi: apa yang dirasakan -->
-      <section class="sec"><h2 class="sec-title">Apakah ini yang Anda rasakan?</h2><p class="sec-sub">Anda tidak sendirian dalam pergumulan ini.</p>
-        <div class="pain-grid">
-          <div class="pain"><b>Marah &amp; kecewa</b><span>Pada keadaan, orang lain, atau bahkan pada Tuhan.</span></div>
-          <div class="pain"><b>Iman vs kenyataan</b><span>Hati tahu Tuhan bekerja, tetapi pikiran ragu.</span></div>
-          <div class="pain"><b>Sulit mengampuni</b><span>Melepaskan orang yang melukai Anda.</span></div>
-          <div class="pain"><b>Lelah menunggu</b><span>Sudah berdoa dan berusaha, jawaban belum terlihat.</span></div>
-        </div>
-      </section>
-      <div class="quote-block">"Marilah kepada-Ku, semua yang letih lelah dan berbeban berat, Aku akan memberi kamu istirahat."<span>Matius 11:28</span></div>
-
-
-      <!-- 5. Apa yang akan dikenali -->
-      <section class="sec"><h2 class="sec-title">8 Inner Block yang akan kita kenali</h2><p class="sec-sub">Hasil refleksi menunjukkan mana yang paling dominan pada Anda saat ini.</p>
-        <div class="chips">
-          <span class="chip">Kekecewaan</span><span class="chip">Kelelahan Berharap</span><span class="chip">Keraguan</span><span class="chip">Ketakutan</span>
-          <span class="chip">Kemarahan</span><span class="chip">Kebutuhan Mengendalikan</span><span class="chip">Rasa Bersalah</span><span class="chip">Merasa Tidak Layak</span>
-        </div>
-        <div class="quote-block">"Curahkanlah isi hatimu di hadapan-Nya."<span>Mazmur 62:9</span></div>
+      <!-- Relevansi -->
+      <section class="sec">
+        <h2 class="sec-title">Mungkin yang sedang terjadi bukan seperti yang Anda kira</h2>
+        <p class="sec-sub">Tes ini tidak mengukur apakah doa Anda didengar Tuhan. Itu tidak bisa diukur oleh tes. Yang bisa dikenali adalah pola di dalam diri Anda saat berdoa dan menunggu.</p>
+        <p class="mirror">Anda mungkin bukan kehilangan iman. Anda mungkin sedang kelelahan menunggu.</p>
+        <p class="mirror">Masalahnya mungkin bukan Anda tidak percaya Tuhan. Anda mungkin terlalu takut kecewa sekali lagi.</p>
+        <p class="mirror">Anda sudah menyerahkan masalah itu dalam doa, tetapi pikiran Anda masih terus mengambilnya kembali.</p>
+        <div class="scripture">"Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu."<span>Matius 11:28</span></div>
       </section>
 
-      <!-- 6. Contoh hasil -->
-      <section class="sec"><h2 class="sec-title">Seperti inilah Peta Hati Anda</h2><p class="sec-sub">Hasilnya langsung tampil, lengkap dengan satu langkah kecil.</p>
+      <!-- 8 Prayer Pattern -->
+      <section class="sec">
+        <h2 class="sec-title">8 Prayer Pattern yang akan kita kenali</h2>
+        <p class="sec-sub">Hasil Anda menunjukkan pola yang paling dominan dan satu pola pendamping.</p>
+        <div class="pat-list" id="lc-pat-list"></div>
+        <div class="scripture">"Curahkanlah isi hatimu di hadapan-Nya."<span>Mazmur 62:9</span></div>
+      </section>
+
+      <!-- Contoh hasil -->
+      <section class="sec">
+        <h2 class="sec-title">Seperti inilah Peta Doa Anda</h2>
+        <p class="sec-sub">Hasil langsung tampil, disusul tiga pertanyaan refleksi dan satu ayat yang relevan.</p>
         <div class="sum-card sample">
           <span class="tag">Contoh ilustrasi, bukan hasil orang sungguhan</span>
-          <h4>📜 Peta Hati Maria</h4>
-          <div class="sum-item"><strong>Inner Block dominan</strong><b>Kekecewaan</b></div>
-          <div class="bar-row"><span><em>Kekecewaan</em><em>78</em></span><div class="bar"><i style="width:78%"></i></div></div>
-          <div class="bar-row"><span><em>Kelelahan Berharap</em><em>61</em></span><div class="bar"><i style="width:61%"></i></div></div>
-          <div class="bar-row"><span><em>Keraguan</em><em>44</em></span><div class="bar"><i style="width:44%"></i></div></div>
-          <div class="sum-item"><strong>Refleksi</strong>Kecewa muncul saat harapan belum bertemu kenyataan. Mengakuinya adalah kejujuran, bukan kurang iman.<span class="stp">Langkah kecil: sebutkan kekecewaan Anda kepada Tuhan apa adanya selama 2 menit.</span></div>
+          <h4>Peta Doa Maria</h4>
+          <div class="sum-item"><strong>Prayer Pattern utama</strong><b>The Controlled Heart</b>, Hati yang Sulit Melepaskan</div>
+          <div class="sum-item"><strong>Inner Block</strong>Sulit menyerahkan hasil setelah meminta.</div>
+          <div class="sum-item"><strong>Yang mungkin terjadi</strong>Maria sudah berdoa, tetapi pikirannya tetap mencari kepastian: "Kapan terjadi? Bagaimana caranya?"
+            <div class="bar-row"><span><em>Sulitnya berserah</em><em>78</em></span><div class="bar"><i style="width:78%"></i></div></div>
+            <div class="bar-row"><span><em>Beratnya beban emosi</em><em>61</em></span><div class="bar"><i style="width:61%"></i></div></div>
+            <div class="bar-row"><span><em>Lelahnya harapan</em><em>44</em></span><div class="bar"><i style="width:44%"></i></div></div>
+          </div>
+          <div class="sum-item"><strong>Ayat untuk direnungkan</strong><em>"Serahkanlah segala kekuatiranmu kepada-Nya, sebab Ia yang memelihara kamu."</em> (1 Petrus 5:7)</div>
         </div>
       </section>
 
-      <!-- 7. Cara kerja + ajakan -->
-      <section class="sec"><h2 class="sec-title">Cara kerjanya</h2><p class="sec-sub">Tiga langkah, langsung dari HP Anda.</p>
+      <!-- Cara kerja -->
+      <section class="sec">
+        <h2 class="sec-title">Cara kerjanya</h2>
+        <p class="sec-sub">Tiga langkah, langsung dari HP Anda.</p>
         <div class="steps">
-          <div class="step"><span>1</span><div><b>Jawab 10 pernyataan singkat</b><p>Pilih seberapa sering Anda merasakannya. Tidak ada jawaban benar atau salah.</p></div></div>
-          <div class="step"><span>2</span><div><b>Terima Peta Hati seketika</b><p>Inner Block dominan, refleksi, dan satu langkah kecil langsung tampil.</p></div></div>
-          <div class="step"><span>3</span><div><b>Terima laporan lewat WhatsApp</b><p>Laporan lengkap dikirim setelah Anda menekan tombol konfirmasi.</p></div></div>
+          <div class="step"><span>1</span><div><b>Jawab 10 pernyataan singkat</b><p>Pilih seberapa sesuai pernyataan itu dengan Anda. Tidak ada jawaban benar atau salah.</p></div></div>
+          <div class="step"><span>2</span><div><b>Terima Peta Doa seketika</b><p>Prayer Pattern, Inner Block, tiga pertanyaan refleksi, lalu ayat yang relevan.</p></div></div>
+          <div class="step"><span>3</span><div><b>Terima laporan lengkap lewat WhatsApp</b><p>Laporan dikirim setelah Anda menekan tombol konfirmasi.</p></div></div>
         </div>
         <p class="trust">Nomor WhatsApp hanya dipakai untuk mengirim laporan Anda. Tidak ada pembayaran, tidak ada langganan.</p>
-        <button class="btn-prim gold sec-cta" type="button" onclick="LC.open()">Mulai Refleksi 5 Menit</button>
+        <button class="btn-prim sec-cta" type="button" onclick="LC.open()">Mulai Refleksi 3 Menit</button>
       </section>
 
-      <!-- 8. Pembuat -->
+      <!-- Pembuat -->
       <section class="sec">
         <div class="about">
           <img src="https://iili.io/nckS2qP.png" alt="Vell, Creator prayer.my.id" class="about-photo" width="110" height="110" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -305,61 +338,81 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 
 <script>
 (function () {
+  // ============================================================
+  // KONFIGURASI
+  // SCRIPT_URL = URL Web App Google Apps Script (Deploy > Manage deployments).
+  // Token Fonnte, API key Qwen, dan Spreadsheet ID TIDAK ada di file ini:
+  // semuanya tersimpan di Script Properties pada Apps Script.
+  //
+  // API_SECRET (opsional): kode di halaman ini bisa dibaca siapa pun lewat
+  // "View Source", jadi ini hanya anti-spam ringan, bukan pengaman.
+  // Jika APP_SECRET di Apps Script tidak diisi (atau sudah dihapus lewat
+  // hapusAppSecret()), biarkan API_SECRET kosong ('').
+  // ============================================================
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxjc8VB-ZoNOseyvOm8hYaQR5bsvU_AICAFEKS1gLU9me80YvnmJreQp4Anwd4gYzFz/exec';
-
-  // ============================================================
-  // FIX: Apps Script Anda menolak request dengan "Secret tidak cocok".
-  // Isi nilai di bawah PERSIS sama dengan secret di backend
-  // (Apps Script > Project Settings > Script Properties, atau konstanta di Code.gs).
-  // Jika backend Anda memakai nama field selain "secret" (mis. "token" / "key"),
-  // ubah SECRET_FIELD di bawah.
-  // ============================================================
-  const API_SECRET = 'GANTI_DENGAN_SECRET_DI_APPS_SCRIPT';
+  const API_SECRET = '';
   const SECRET_FIELD = 'secret';
 
   const MAX_USE = 2, WA_BUSINESS = '628595006988';
   let USER_REF = 'DIRECT';
   const HOTLINE = '119 ext. 8 (layanan kesehatan jiwa Kemenkes)';
   const CRISIS_WORDS = ['bunuh diri','mengakhiri hidup','ingin mati','tidak ingin hidup','tak ingin hidup','tidak ingin lanjut hidup','tidak mau hidup','menyakiti diri','melukai diri','akhiri hidup','lebih baik mati','capek hidup'];
-  const REPORT_NAME = 'Laporan Gratis Karakter &amp; Inner Block prayer.my.id', REPORT_PLAIN = 'laporan gratis karakter & inner block';
-  const LABELS = ['Tidak pernah','Jarang','Kadang-kadang','Sering','Sangat sering'];
+  const REPORT_NAME = 'Laporan Gratis Prayer Pattern &amp; Inner Block prayer.my.id', REPORT_PLAIN = 'laporan gratis prayer pattern & inner block';
+  const LABELS = ['Sangat tidak sesuai','Tidak sesuai','Kadang-kadang','Sesuai','Sangat sesuai'];
   const BULAN = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
 
-  const B = {
-    hopelessness:{n:'Kelelahan Berharap',r:'Menunggu lama bisa membuat hati lelah untuk berharap. Itu bukan tanda iman Anda gagal, melainkan tanda Anda sudah bertahan cukup lama.',s:'Tulis satu hal kecil yang masih Anda syukuri hari ini, lalu sebutkan dalam doa satu kalimat saja.'},
-    disappointment:{n:'Kekecewaan',r:'Kecewa muncul saat harapan belum bertemu kenyataan. Mengakuinya adalah kejujuran, bukan kurang iman.',s:'Sebutkan kekecewaan Anda kepada Tuhan dengan kata-kata apa adanya selama 2 menit, tanpa dihaluskan.'},
-    doubt:{n:'Keraguan',r:'Keyakinan yang naik turun saat doa belum terjawab sangat manusiawi. Keraguan sering muncul justru karena Anda masih peduli.',s:'Catat tiga momen saat Anda pernah merasa ditolong, sekecil apa pun, dan baca ulang saat ragu datang.'},
-    fear:{n:'Ketakutan',r:'Pikiran yang cepat membayangkan kemungkinan terburuk adalah cara hati melindungi diri. Ia perlu didengar, bukan dilawan keras-keras.',s:'Tulis satu ketakutan terbesar, lalu tulis satu langkah kecil yang benar-benar bisa Anda kendalikan minggu ini.'},
-    anger:{n:'Kemarahan',r:'Marah sering menjadi penjaga bagi hati yang terluka. Ia layak didengar, bukan ditekan, termasuk saat Anda berdoa.',s:'Berdoalah dengan jujur tentang apa yang membuat Anda marah, tanpa menyaring kata-kata, satu kali minggu ini.'},
-    control:{n:'Kebutuhan Mengendalikan',r:'Keinginan memastikan semua berjalan sesuai rencana biasanya lahir dari rasa takut tidak aman. Menyerahkan hasil adalah proses yang dilatih pelan-pelan.',s:'Pilih satu hal kecil yang hasilnya tidak bisa Anda atur, lalu ucapkan: "Aku serahkan hasilnya hari ini."'},
-    guilt:{n:'Rasa Bersalah',r:'Merasa tidak pantas datang kepada Tuhan setelah gagal sering membuat orang menjauh tepat saat butuh didekap.',s:'Ceritakan satu kegagalan kepada Tuhan seperti bercerita kepada sahabat, lalu akhiri dengan satu kalimat menerima pengampunan.'},
-    unworthiness:{n:'Merasa Tidak Layak',r:'Perasaan bahwa orang lain lebih layak sering tumbuh dari perbandingan dan luka lama. Nilai Anda tidak ditentukan oleh hasil atau kegagalan Anda.',s:'Tulis tiga hal yang bukan prestasi tetapi benar tentang diri Anda, dan baca setiap pagi minggu ini.'}
+  // ============================================================
+  // MODEL PRAYER PATTERN (HARUS SAMA DENGAN Code.gs)
+  // ============================================================
+  const DIMS = {
+    trust:{n:'Goyahnya kepercayaan'},
+    hope:{n:'Lelahnya harapan'},
+    surrender:{n:'Sulitnya berserah'},
+    burden:{n:'Beratnya beban emosi'},
+    consistency:{n:'Naik-turunnya ketekunan'}
   };
-  const ORDER = ['hopelessness','disappointment','doubt','fear','anger','control','guilt','unworthiness'];
+  const DIM_ORDER = ['trust','hope','surrender','burden','consistency'];
 
-  const Q = [
-    {b:'disappointment',t:'Saya merasa kecewa ketika sesuatu yang saya doakan dengan sungguh-sungguh tidak terjadi seperti yang saya harapkan.'},
-    {b:'fear',t:'Ketika menghadapi masalah besar, saya khawatir keadaan akan menjadi lebih buruk meskipun saya sudah berdoa.'},
-    {b:'unworthiness',t:'Saya merasa orang lain lebih layak menerima pertolongan atau berkat Tuhan daripada saya.'},
-    {b:'doubt',t:'Ketika doa saya belum terjawab, saya bertanya-tanya apakah Tuhan benar-benar mendengar saya.'},
-    {b:'anger',t:'Ketika mengalami ketidakadilan atau perlakuan yang menyakitkan, kemarahan saya terbawa sampai ke dalam doa.'},
-    {b:'hopelessness',t:'Ketika sesuatu yang sangat saya doakan belum terjadi, saya mulai merasa lelah untuk terus berharap.'},
-    {b:'guilt',t:'Saya pernah merasa kesalahan atau kegagalan saya membuat saya tidak pantas datang kepada Tuhan.'},
-    {b:'control',t:'Saya sulit menyerahkan hasilnya kepada Tuhan karena ingin memastikan semuanya berjalan sesuai rencana saya.'},
-    {b:'hopelessness',t:'Ada saat-saat di mana rasanya percuma berdoa karena keadaan sepertinya tidak akan berubah.'},
-    {b:'hope',t:'Meskipun sedang mengalami masalah berat, masih ada bagian dalam diri saya yang ingin tetap berharap kepada Tuhan.'}
+  // 10 pernyataan terpilih dari 30 butir. k = kode butir asli. rev = butir positif (skor dibalik jadi "beban").
+  const ITEMS = [
+    {k:'q2',  d:'trust',       rev:false, t:'Ketika doa saya belum dijawab, saya mulai bertanya apakah Tuhan benar-benar mendengar saya.'},
+    {k:'q10', d:'hope',        rev:false, t:'Pengalaman masa lalu membuat saya takut berharap terlalu tinggi.'},
+    {k:'q14', d:'surrender',   rev:false, t:'Saya sering merasa harus mengendalikan bagaimana doa saya seharusnya dijawab.'},
+    {k:'q22', d:'burden',      rev:false, t:'Saya takut mengungkapkan perasaan saya yang sebenarnya kepada Tuhan.'},
+    {k:'q25', d:'consistency', rev:true,  t:'Saya tetap berdoa meskipun belum melihat perubahan.'},
+    {k:'q6',  d:'trust',       rev:false, t:'Ketika keadaan semakin buruk, kepercayaan saya kepada Tuhan mudah terguncang.'},
+    {k:'q16', d:'surrender',   rev:false, t:'Saya sulit berhenti memikirkan sesuatu yang sedang saya doakan.'},
+    {k:'q24', d:'burden',      rev:false, t:'Ada hal dalam hidup saya yang terus memenuhi pikiran bahkan ketika saya sedang berdoa.'},
+    {k:'q8',  d:'hope',        rev:false, t:'Saya sering merasa bahwa doa saya tidak akan mengubah keadaan.'},
+    {k:'q28', d:'consistency', rev:false, t:'Saya sering baru berdoa dengan sungguh-sungguh ketika sedang menghadapi masalah.'}
   ];
-  const TOTAL_STEPS = Q.length + 3;
 
+  const PAT_ORDER = ['waiting','controlled','wounded','silent','burdened','faithful','conditional','surrendered'];
+  const PAT = {
+    waiting:{en:'The Waiting Heart',id:'Hati yang Sedang Menunggu',tag:'Anda tetap berharap, tetapi sedang berada dalam fase menunggu jawaban.',strength:'Ketekunan.',challenge:'Rasa lelah karena belum melihat perubahan.',block:'Lelah menunggu tanpa tanda yang terlihat.',happening:'Anda belum berhenti berdoa dan belum berhenti berharap. Yang terasa berat adalah jedanya: sudah lama meminta, tetapi perubahan belum juga terlihat.',feel:'Anda mungkin sering bertanya, "Sampai kapan?" Ada hari ketika doa terasa tenang, ada hari ketika rasanya seperti berbicara ke ruang kosong.',notBut:'Anda mungkin bukan kehilangan iman. Anda mungkin sedang kelelahan menunggu.',tries:['Sebut rasa lelah itu kepada Tuhan apa adanya, tanpa dihaluskan.','Catat satu hal kecil yang masih menopang Anda selama masa menunggu ini.','Pilih satu kebiasaan doa yang ringan, misalnya 3 menit setiap pagi, supaya Anda tetap dekat tanpa merasa terbebani.'],verse:{t:'Nantikanlah TUHAN! Kuatkanlah dan teguhkanlah hatimu!',r:'Mazmur 27:14'}},
+    controlled:{en:'The Controlled Heart',id:'Hati yang Sulit Melepaskan',tag:'Anda memiliki keinginan kuat terhadap hasil tertentu dan sulit menyerahkan hasil akhirnya.',strength:'Serius dan memiliki tujuan.',challenge:'Kecemasan ketika hasil berada di luar kendali.',block:'Sulit menyerahkan hasil setelah meminta.',happening:'Anda mungkin sedang membawa keinginan yang sangat kuat terhadap satu hasil tertentu. Karena hasil itu terasa penting, pikiran Anda terus kembali kepadanya bahkan setelah Anda berdoa.',feel:'Anda sudah berdoa, tetapi pikiran tetap mencari kepastian: "Kapan terjadi? Bagaimana caranya? Apakah Tuhan akan menjawab?"',notBut:'Anda sudah menyerahkan masalah itu dalam doa, tetapi pikiran Anda masih terus mengambilnya kembali.',tries:['Sampaikan permintaan Anda dengan jelas.','Akui apa yang tidak dapat Anda kendalikan.','Beri ruang bagi diri untuk menerima kemungkinan jawaban yang berbeda.'],verse:{t:'Serahkanlah segala kekuatiranmu kepada-Nya, sebab Ia yang memelihara kamu.',r:'1 Petrus 5:7'}},
+    wounded:{en:'The Wounded Hope',id:'Harapan yang Pernah Kecewa',tag:'Anda masih ingin percaya, tetapi pengalaman sebelumnya membuat Anda berhati-hati untuk berharap.',strength:'Realistis.',challenge:'Takut kembali kecewa.',block:'Takut kecewa untuk kedua kalinya.',happening:'Anda masih ingin percaya, tetapi ada bagian dalam diri yang menahan. Berharap terasa seperti membuka pintu bagi kemungkinan terluka lagi.',feel:'Anda mungkin berdoa dengan hati-hati, menurunkan harapan lebih dulu supaya jika tidak terjadi, rasa kecewanya tidak terlalu dalam.',notBut:'Masalahnya mungkin bukan Anda tidak percaya Tuhan. Anda mungkin terlalu takut kecewa sekali lagi.',tries:['Ceritakan kepada Tuhan kekecewaan lama yang masih Anda bawa.','Bedakan antara berharap pada hasil tertentu dan berharap kepada Tuhan.','Mulai dari harapan yang kecil dan konkret untuk minggu ini.'],verse:{t:'Sebab Aku ini mengetahui rancangan-rancangan apa yang ada pada-Ku mengenai kamu, demikianlah firman TUHAN, yaitu rancangan damai sejahtera dan bukan rancangan kecelakaan, untuk memberikan kepadamu hari depan yang penuh harapan.',r:'Yeremia 29:11'}},
+    silent:{en:'The Silent Soul',id:'Jiwa yang Sulit Mengungkapkan',tag:'Anda datang kepada Tuhan, tetapi tidak selalu mudah mengatakan apa yang sebenarnya ada di dalam hati.',strength:'Reflektif.',challenge:'Banyak hal dipendam sendiri.',block:'Perasaan yang sebenarnya tertahan sebelum sampai kepada Tuhan.',happening:'Doa Anda mungkin terdengar rapi, tetapi bagian yang paling jujur belum ikut terucap. Bisa jadi karena takut, malu, atau merasa perasaan itu tidak pantas dibawa kepada Tuhan.',feel:'Anda bisa merasa sudah berdoa, tetapi tetap sendirian. Ada kalimat yang berputar di kepala namun tidak pernah sampai ke dalam doa.',notBut:'Anda mungkin tidak sedang jauh dari Tuhan. Anda mungkin belum merasa aman untuk jujur kepada-Nya.',tries:['Tulis satu kalimat jujur yang selama ini Anda simpan, hanya untuk Anda dan Tuhan.','Ucapkan kalimat itu dalam doa, boleh singkat dan berantakan.','Bila terasa terlalu berat, ceritakan kepada satu orang yang Anda percaya.'],verse:{t:'Percayalah kepada-Nya setiap waktu, hai umat, curahkanlah isi hatimu di hadapan-Nya; Allah ialah tempat perlindungan kita.',r:'Mazmur 62:9'}},
+    burdened:{en:'The Burdened Prayer',id:'Doa yang Membawa Beban',tag:'Pikiran dan emosi dari kehidupan sehari-hari ikut terbawa ketika Anda berdoa.',strength:'Anda menyadari pergumulan hidup secara mendalam.',challenge:'Sulit mendapatkan ketenangan ketika berdoa.',block:'Beban sehari-hari ikut terbawa masuk ke ruang doa.',happening:'Ada hal dalam hidup Anda yang terus memenuhi pikiran, dan hal itu ikut duduk bersama Anda saat berdoa. Fokus mudah terpecah, dan tenang terasa jauh.',feel:'Anda bisa selesai berdoa dengan perasaan belum benar-benar lega, seolah beban itu hanya dipindahkan sebentar lalu kembali.',notBut:'Anda mungkin bukan kurang bersungguh-sungguh berdoa. Anda mungkin sedang membawa terlalu banyak sekaligus.',tries:['Sebelum berdoa, tuliskan semua yang memenuhi pikiran Anda dalam satu daftar singkat.','Sebut satu per satu dalam doa, lalu coret yang sudah Anda serahkan.','Beri jeda hening 1 menit di akhir, tanpa meminta apa pun.'],verse:{t:'Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu.',r:'Matius 11:28'}},
+    faithful:{en:'The Faithful Seeker',id:'Pencari yang Tekun',tag:'Anda tetap mencari Tuhan bahkan ketika jawaban belum terlihat.',strength:'Konsistensi dan ketekunan.',challenge:'Bisa mengalami kelelahan spiritual jika terlalu lama menunggu.',block:'Bertahan lama tanpa ruang untuk beristirahat.',happening:'Anda tetap datang kepada Tuhan, hari demi hari, walau belum melihat perubahan. Ketekunan itu berharga. Yang perlu dijaga adalah tenaga batin Anda.',feel:'Anda mungkin tampak kuat bagi orang lain, padahal di dalam ada lelah yang jarang diakui.',notBut:'Anda mungkin tidak perlu berdoa lebih keras. Anda mungkin perlu ruang untuk dipulihkan di tengah penantian.',tries:['Izinkan satu hari yang ringan: berdoa singkat tanpa daftar permintaan.','Syukuri satu tanda kecil bahwa Anda telah ditopang selama ini.','Bagikan pergumulan Anda kepada satu teman seiman supaya tidak menanggungnya sendiri.'],verse:{t:'Tetapi orang-orang yang menanti-nantikan TUHAN mendapat kekuatan baru: mereka seumpama rajawali yang naik terbang dengan kekuatan sayapnya; mereka berlari dan tidak menjadi lesu, mereka berjalan dan tidak menjadi letih.',r:'Yesaya 40:31'}},
+    conditional:{en:'The Conditional Believer',id:'Iman yang Mudah Dipengaruhi Keadaan',tag:'Ketika keadaan membaik, iman terasa kuat. Ketika keadaan memburuk, kepercayaan mudah terguncang.',strength:'Responsif terhadap pengalaman hidup.',challenge:'Membangun kepercayaan yang tidak sepenuhnya bergantung pada keadaan.',block:'Kepercayaan naik turun mengikuti keadaan.',happening:'Rasa dekat Anda dengan Tuhan cenderung mengikuti grafik keadaan: kuat saat lancar, goyah saat sulit. Itu sangat manusiawi.',feel:'Saat keadaan memburuk, Anda mungkin bertanya apakah Tuhan masih peduli, lalu merasa bersalah karena bertanya.',notBut:'Anda mungkin tidak kurang beriman. Kepercayaan Anda mungkin belum punya pijakan yang tidak ikut bergoyang ketika keadaan berubah.',tries:['Tulis tiga hal tentang Tuhan yang Anda yakini benar, terlepas dari keadaan hari ini.','Baca ulang catatan itu saat keadaan terasa memburuk.','Jujurlah dalam doa tentang keraguan Anda, tanpa menunggu keadaan membaik.'],verse:{t:'Iman adalah dasar dari segala sesuatu yang kita harapkan dan bukti dari segala sesuatu yang tidak kita lihat.',r:'Ibrani 11:1'}},
+    surrendered:{en:'The Surrendered Heart',id:'Hati yang Belajar Berserah',tag:'Anda mampu menyampaikan keinginan dengan sungguh-sungguh sekaligus membuka diri terhadap hasil yang berbeda.',strength:'Fleksibilitas dan ketenangan.',challenge:'Tetap menjaga harapan tanpa berubah menjadi pasif.',block:'Menjaga agar berserah tidak berubah menjadi pasif.',happening:'Anda sudah punya ruang untuk meminta sekaligus melepaskan. Tantangannya bukan berjuang lebih keras, melainkan menjaga keseimbangan itu.',feel:'Anda mungkin merasa cukup tenang, tetapi sesekali bertanya apakah berserah berarti berhenti berusaha.',notBut:'Anda mungkin tidak perlu berjuang lebih keras. Anda mungkin tinggal menjaga keseimbangan antara berserah dan tetap bergerak.',tries:['Tulis satu langkah nyata yang masih menjadi bagian Anda minggu ini.','Serahkan hasilnya dalam doa setelah langkah itu dilakukan.','Syukuri apa yang sudah bertumbuh dalam diri Anda selama proses ini.'],verse:{t:'Percayalah kepada TUHAN dengan segenap hatimu, dan janganlah bersandar kepada pengertianmu sendiri.',r:'Amsal 3:5'}}
+  };
+
+  const REFLECTION = [
+    'Apa yang sebenarnya paling saya takutkan jika doa ini belum terjawab?',
+    'Apa yang ingin saya kendalikan yang sebenarnya berada di luar kendali saya?',
+    'Jika saya benar-benar percaya kepada Tuhan, apa yang perlu saya lepaskan hari ini?'
+  ];
+  const TOTAL_STEPS = ITEMS.length + 3;
+
+  // ============================================================
+  // UTILITAS
+  // ============================================================
   function track(n) { try { if (window.fbq) fbq('trackCustom', n); (window.dataLayer = window.dataLayer || []).push({ event: n }); } catch (e) {} }
   function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
-
-  // FIX: semua request ke Apps Script lewat satu fungsi yang menyisipkan secret
-  function withSecret(obj) {
-    if (API_SECRET) obj[SECRET_FIELD] = API_SECRET;
-    return obj;
-  }
+  function withSecret(obj) { if (API_SECRET) obj[SECRET_FIELD] = API_SECRET; return obj; }
 
   let started = false, busy = false, idx = 0, nama = '', tglLahir = '', penyerahan = '', crisisFlag = false, reportSent = false, R = null;
   const ans = [];
@@ -375,7 +428,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   }
   function hasCrisis(t) { t = String(t || '').toLowerCase(); return CRISIS_WORDS.some(function (w) { return t.indexOf(w) !== -1; }); }
   function normWA(v) { let d = String(v).replace(/\D/g, ''); if (d.indexOf('0') === 0) d = '62' + d.slice(1); else if (d.indexOf('8') === 0) d = '62' + d; return d; }
-
   function parseD(v) { const p = String(v || '').split('-'); if (p.length !== 3) return null; const d = new Date(+p[0], +p[1]-1, +p[2]); return isNaN(d.getTime()) ? null : d; }
   function fmtNum(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
   function fmtDate(v) { const d = parseD(v); return d ? d.getDate() + ' ' + BULAN[d.getMonth()] + ' ' + d.getFullYear() : v; }
@@ -385,7 +437,45 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     const days = Math.round(Math.max(0, t - b) / 86400000);
     return { days: fmtNum(days), years: Math.floor(days / 365.25) };
   }
+  function levelOf(s) { return s >= 75 ? 'Tinggi' : s >= 50 ? 'Sedang' : s >= 25 ? 'Ringan' : 'Rendah'; }
 
+  // ============================================================
+  // PERHITUNGAN (rumus identik dengan Code.gs)
+  // ============================================================
+  function avg() { let s = 0; for (let i = 0; i < arguments.length; i++) s += arguments[i]; return s / arguments.length; }
+  function compute(a) {
+    const x = {};
+    ITEMS.forEach(function (it, i) {
+      let v = a[i]; if (v == null || v < 0 || v > 4) v = 0;
+      x[it.k] = Math.round((it.rev ? 4 - v : v) / 4 * 100);
+    });
+    const persist = 100 - x.q25;
+    const dims = {
+      trust: Math.round(avg(x.q2, x.q6)),
+      hope: Math.round(avg(x.q8, x.q10)),
+      surrender: Math.round(avg(x.q14, x.q16)),
+      burden: Math.round(avg(x.q22, x.q24)),
+      consistency: Math.round(avg(x.q25, x.q28))
+    };
+    const trustAvg = avg(x.q2, x.q6), hopeAvg = avg(x.q8, x.q10);
+    const sc = {
+      waiting: 0.4 * persist + 0.3 * (100 - x.q8) + 0.3 * avg(x.q24, x.q16),
+      controlled: 0.6 * x.q14 + 0.4 * x.q16,
+      wounded: 0.65 * x.q10 + 0.35 * x.q8,
+      silent: 0.7 * x.q22 + 0.3 * x.q24,
+      burdened: 0.7 * x.q24 + 0.3 * x.q16,
+      faithful: 0.4 * persist + 0.3 * (100 - x.q28) + 0.3 * (100 - trustAvg),
+      conditional: 0.5 * x.q6 + 0.3 * x.q28 + 0.2 * x.q2,
+      surrendered: 0.35 * (100 - x.q14) + 0.25 * (100 - x.q16) + 0.2 * (100 - hopeAvg) + 0.2 * (100 - trustAvg)
+    };
+    const rank = PAT_ORDER.slice().sort(function (p, q) { return sc[q] - sc[p] || PAT_ORDER.indexOf(p) - PAT_ORDER.indexOf(q); });
+    const alert = crisisFlag || (dims.hope >= 87 && dims.burden >= 75);
+    return { dims: dims, scores: sc, rank: rank, primary: rank[0], secondary: rank[1], alert: alert };
+  }
+
+  // ============================================================
+  // UI CHAT
+  // ============================================================
   function scrollDown() { const b = $('lc-msgs'); if (b) b.scrollTop = b.scrollHeight; }
   function msg(cls, av, html, bc) {
     const box = $('lc-msgs'); if (!box) return;
@@ -439,26 +529,27 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 
   function greet() {
     typing(700, function () {
-      bot('Salam damai, sahabat. 🕊️ Saya Natanael, pendamping refleksi digital Anda.<br><br><em>Tuhan tidak terkejut dengan isi hatimu. Dia sudah tahu, dan Dia tetap membantumu.</em>', 'greeting');
+      bot('Salam damai, sahabat. 🕊️ Saya Natanael, pendamping refleksi digital Anda.<br><br><em>Berdoa bukan hanya soal apa yang kita minta, tetapi juga apa yang terjadi di dalam hati kita saat menunggu.</em>', 'greeting');
       setTimeout(function () { ask(0); }, 600);
     });
   }
 
   function ask(i) {
     idx = i; setProgress((i + 1) / TOTAL_STEPS * 90);
+    const N = ITEMS.length;
     if (i === 0) {
       typing(700, function () { bot('Izinkan saya mengenal Anda. Siapa nama panggilan Anda?'); textInput('Tulis nama panggilan Anda...', false, function (v) { nama = v; user(v); clearInput(); setTimeout(askBirth, 350); }); });
-    } else if (i <= Q.length) {
+    } else if (i <= N) {
       if (i === 5) track('LC_Step5');
-      const intro = i === 1 ? 'Berikut ' + Q.length + ' pernyataan. Pilih yang paling menggambarkan Anda belakangan ini. Tidak ada jawaban benar atau salah.<br><br>' : '';
-      const mid = i === Math.ceil(Q.length / 2) + 1 ? 'Anda sudah melewati separuh jalan. 🌿<br><br>' : '';
+      const intro = i === 1 ? 'Berikut ' + N + ' pernyataan tentang cara Anda berdoa dan menunggu. Pilih seberapa sesuai dengan Anda belakangan ini. Tidak ada jawaban benar atau salah, dan ini bukan ukuran besar kecilnya iman Anda.<br><br>' : '';
+      const mid = i === Math.ceil(N / 2) + 1 ? 'Anda sudah melewati separuh jalan. 🌿<br><br>' : '';
       typing(i === 1 ? 800 : 450, function () {
-        bot(intro + mid + '<span class="qn">Pernyataan ' + i + ' dari ' + Q.length + '</span>' + esc(Q[i - 1].t));
+        bot(intro + mid + '<span class="qn">Pernyataan ' + i + ' dari ' + N + '</span>' + esc(ITEMS[i - 1].t));
         likert(i);
       });
-    } else if (i === Q.length + 1) {
+    } else if (i === N + 1) {
       typing(700, function () {
-        bot('Satu hal terakhir, ' + nm() + '. Dari refleksi tadi, <strong>satu langkah kecil</strong> apa yang ingin Anda lakukan minggu ini? <em>(boleh dilewati)</em>');
+        bot('Satu hal terakhir, ' + nm() + '. Dari refleksi tadi, <strong>satu langkah kecil</strong> apa yang ingin Anda lakukan minggu ini dalam doa Anda? <em>(boleh dilewati)</em>');
         textInput('Contoh: berdoa 5 menit setiap pagi...', true, function (v, skipped) {
           penyerahan = skipped ? '' : v; user(skipped ? 'Lewati' : v); clearInput();
           if (!skipped && hasCrisis(v)) {
@@ -483,11 +574,11 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         if (!b) { setTimeout(function () { ask(1); }, 350); return; }
         typing(1000, function () {
           bot(nm() + ', tahukah Anda? Hari ini Anda telah menjalani <strong>' + b.days + ' hari</strong> di bumi ini.<br><br>' +
-            'Itu bukan sekadar angka: itu <strong>' + b.days + ' pagi</strong> di mana matahari terbit karena Dia setia, dan <strong>' + b.days + ' malam</strong> di mana Dia menjaga tidur Anda.<br><br>' +
+            'Itu <strong>' + b.days + ' pagi</strong> di mana matahari terbit karena Dia setia, dan <strong>' + b.days + ' malam</strong> di mana Dia menjaga tidur Anda.<br><br>' +
             'Sudah <strong>' + b.years + ' tahun</strong> lebih Anda ditopang. <em>Anda adalah penerima kasih karunia yang luar biasa.</em> 🌿');
           setTimeout(function () {
             typing(1000, function () {
-              bot('Jika Anda sudah merasakan berkat selama <strong>' + b.days + '</strong> hari, Anda punya kekuatan untuk hari-hari berikutnya. Sekarang, izinkan saya bertanya lebih dalam...');
+              bot('Anda sudah berdoa selama ini. Sekarang, izinkan saya bertanya apa yang terjadi di dalam diri Anda saat berdoa dan menunggu...');
               setTimeout(function () { ask(1); }, 800);
             });
           }, 1800);
@@ -532,63 +623,87 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     tb.onclick = function () { const v = ta.value.replace(/^\s+|\s+$/g, ''); if (v) go(v, false); };
     ta.onkeydown = function (e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); tb.click(); } };
     if (skippable) { const s = document.createElement('button'); s.type = 'button'; s.className = 'skip-btn'; s.textContent = 'Lewati pertanyaan ini'; s.onclick = function () { go('', true); }; ci.appendChild(s); }
-    // REVISI: di HP (layar sentuh) jangan autofocus agar keyboard tidak menutup bubble pertanyaan
     if (!window.matchMedia('(pointer:coarse)').matches) setTimeout(function () { ta.focus({ preventScroll: true }); }, 350);
     ta.addEventListener('focus', function () { setTimeout(function () { scrollDown(); ci.scrollIntoView({ block: 'nearest' }); }, 300); });
     setTimeout(scrollDown, 400);
   }
 
-  function compute() {
-    const sum = {}, cnt = {}; ORDER.forEach(function (k) { sum[k] = 0; cnt[k] = 0; });
-    let hope = 0;
-    Q.forEach(function (q, i) { const v = ans[i] || 0; if (q.b === 'hope') hope = Math.round(v / 4 * 100); else { sum[q.b] += v; cnt[q.b]++; } });
-    const s = {}; ORDER.forEach(function (k) { s[k] = Math.round(sum[k] / cnt[k] / 4 * 100); });
-    const rank = ORDER.slice().sort(function (a, b) { return s[b] - s[a] || ORDER.indexOf(a) - ORDER.indexOf(b); });
-    const dom = [];
-    if (s[rank[0]] >= 30) { dom.push(rank[0]); if (s[rank[1]] >= 30 && s[rank[0]] - s[rank[1]] < 10) dom.push(rank[1]); }
-    const alert = crisisFlag || (s.hopelessness >= 75 && hope <= 25);
-    return { s: s, hope: hope, dom: dom, rank: rank, alert: alert };
+  // ============================================================
+  // HASIL -> REFLEKSI -> AYAT -> LAPORAN
+  // ============================================================
+  function summary() {
+    track('LC_Complete'); setProgress(95); R = compute(ans);
+    const P = PAT[R.primary], S = PAT[R.secondary];
+    typing(1000, function () {
+      bot('Perjalanan singkat kita selesai, ' + nm() + '. Terima kasih sudah jujur pada diri sendiri.');
+      setTimeout(function () {
+        // Kartu 1: pola utama
+        let h1 = '<div class="res-card"><span class="res-eyebrow">Prayer Pattern utama ' + esc(nama) + '</span>' +
+          '<div class="res-en">' + esc(P.en) + '</div><div class="res-id">' + esc(P.id) + '</div>' +
+          '<p class="res-tag">' + esc(P.tag) + '</p>' +
+          '<div class="res-block"><strong>Inner Block</strong><span>' + esc(P.block) + '</span></div>' +
+          '<p class="res-quote">' + esc(P.notBut) + '</p>' +
+          '<div class="sum-item"><strong>Yang mungkin sedang terjadi</strong>' + esc(P.happening) + '</div>' +
+          '<div class="sum-item"><strong>Bagaimana ini dapat terasa</strong>' + esc(P.feel) + '</div>' +
+          '<div class="res-duo"><div><strong>Kekuatan</strong>' + esc(P.strength) + '</div><div><strong>Tantangan</strong>' + esc(P.challenge) + '</div></div></div>';
+        bot(h1, 'wide');
+
+        setTimeout(function () {
+          // Kartu 2: apa yang mungkin menghambat + peta
+          let h2 = '<div class="sum-card"><h4>Apa yang mungkin sedang menghambat proses doa Anda?</h4>' +
+            '<div class="sub">Bukan berarti Tuhan terhalang oleh manusia. Pola batin tertentu hanya dapat memengaruhi cara kita mengalami proses berdoa. Ini kecenderungan saat ini, bukan diagnosis dan bukan ukuran iman.</div>' +
+            '<div class="sum-item"><strong>Pola pendamping</strong><b>' + esc(S.en) + '</b>, ' + esc(S.id) + '<br>' + esc(S.tag) + '</div>' +
+            '<div class="sum-item"><strong>Peta 5 area batin</strong>';
+          DIM_ORDER.forEach(function (k) {
+            h2 += '<div class="bar-row"><span><em>' + DIMS[k].n + '</em><em>' + levelOf(R.dims[k]) + ' (' + R.dims[k] + ')</em></span><div class="bar"><i style="width:' + R.dims[k] + '%"></i></div></div>';
+          });
+          h2 += '<div class="rep-hint">Semakin panjang batang, semakin terasa berat area tersebut saat ini.</div></div>' +
+            '<div class="sum-item"><strong>Yang dapat dicoba</strong><ol class="tries">' + P.tries.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ol></div>';
+          if (penyerahan) h2 += '<div class="sum-item"><strong>Komitmen Anda</strong>"' + esc(penyerahan) + '"</div>';
+          h2 += '</div>';
+          if (R.alert) h2 += '<div class="sum-card warn"><h4>Butuh teman bicara?</h4><div class="sum-item">Jika beban terasa terlalu berat, hubungi ' + HOTLINE + ' atau psikolog/psikiater terdekat. Anda tidak harus menanggungnya sendirian.</div></div>';
+          bot(h2, 'wide');
+          const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Peta Doa selesai. 🌿</p>';
+          setTimeout(reflect, 1600);
+        }, 1200);
+      }, 900);
+    });
   }
 
-  function summary() {
-    track('LC_Complete'); setProgress(95); R = compute();
-    typing(1000, function () {
-      bot('Perjalanan kita hari ini telah selesai, ' + nm() + '. Terima kasih atas kejujuran Anda.');
+  function reflect() {
+    typing(900, function () {
+      bot('Sebelum kita membaca ayat, luangkan satu menit untuk tiga pertanyaan ini. Tidak perlu dijawab di sini. Cukup dirasakan.');
       setTimeout(function () {
-        let h = '<div class="sum-card"><h4>📜 Peta Hati ' + esc(nama) + '</h4><div class="sub">Kecenderungan Anda saat ini, bukan diagnosis.</div>';
-        const bl = tglLahir ? blessing(tglLahir) : null;
-        if (bl) h += '<div class="sum-item"><strong>Umur Berkat</strong>' + bl.days + ' hari (' + bl.years + ' tahun) ditopang</div>';
-        if (R.dom.length) {
-          h += '<div class="sum-item"><strong>Inner Block dominan</strong>Inner Block dominan Anda saat ini: ' + R.dom.map(function (k) { return '<b>' + B[k].n + '</b>'; }).join(' dan ') + '.</div>';
-          R.dom.forEach(function (k) { h += '<div class="sum-item"><strong>Refleksi: ' + B[k].n + '</strong>' + B[k].r + '<span class="stp">Langkah kecil: ' + B[k].s + '</span></div>'; });
-        } else {
-          h += '<div class="sum-item"><strong>Profil</strong>Hati Anda relatif tenang saat ini. Ini waktu yang baik untuk menguatkan fondasi batin lewat kebiasaan doa yang ringan dan rutin.</div>';
-        }
-        h += '<div class="sum-item"><strong>Peta semua Inner Block</strong>';
-        R.rank.forEach(function (k) { h += '<div class="bar-row"><span><em>' + B[k].n + '</em><em>' + R.s[k] + '</em></span><div class="bar"><i style="width:' + R.s[k] + '%"></i></div></div>'; });
-        h += '<div class="bar-row"><span><em>🌿 Sumber harapan</em><em>' + R.hope + '</em></span><div class="bar hope"><i style="width:' + R.hope + '%"></i></div></div></div>';
-        if (penyerahan) h += '<div class="sum-item"><strong>Komitmen Baru</strong>"' + esc(penyerahan) + '"</div>';
-        h += '</div>';
-        if (R.alert) h += '<div class="sum-card warn"><h4>Butuh teman bicara?</h4><div class="sum-item">Jika beban terasa terlalu berat, hubungi ' + HOTLINE + ' atau psikolog/psikiater terdekat. Anda tidak harus menanggungnya sendirian.</div></div>';
-        bot(h, 'wide');
-        const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Peta Hati selesai. 🌿</p>';
-        setTimeout(reportOffer, 1600);
-      }, 900);
+        bot('<div class="refl"><strong>Pertanyaan refleksi</strong><ol>' + REFLECTION.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ol></div>', 'wide');
+        const ci = clearInput(); if (!ci) return;
+        const b = document.createElement('button'); b.type = 'button'; b.className = 'btn-prim'; b.textContent = 'Saya sudah merenungkan, lanjut ke ayat';
+        b.onclick = function () { if (busy) return; busy = true; user('Saya sudah merenungkan'); clearInput(); setTimeout(function () { busy = false; verse(); }, 300); };
+        ci.appendChild(b);
+      }, 700);
+    });
+  }
+
+  function verse() {
+    const P = PAT[R.primary];
+    typing(900, function () {
+      bot('<div class="verse-card"><p class="lead">Ayat untuk Anda yang sedang berjalan dengan ' + esc(P.en) + ':</p><blockquote>"' + esc(P.verse.t) + '"</blockquote><cite>' + esc(P.verse.r) + '</cite></div>', 'wide');
+      const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Biarkan ayat ini menemani Anda sejenak. 🌿</p>';
+      setTimeout(reportOffer, 2200);
     });
   }
 
   function reportOffer() {
     typing(900, function () {
-      bot('Satu lagi untuk Anda, ' + nm() + ': <strong>' + REPORT_NAME + '</strong>, gratis dan dikirim lewat WhatsApp.');
+      bot('Satu lagi untuk Anda, ' + nm() + ': <strong>' + REPORT_NAME + '</strong>, gratis dan dikirim lewat WhatsApp. Isinya pembacaan yang lebih personal dari jawaban Anda.');
       setTimeout(function () {
         const h = '<div class="rep-card" id="lc-rep"><h4>🎁 ' + REPORT_NAME + '</h4>' +
           '<p>Isi data berikut, centang persetujuan, lalu kirim. Laporan akan dikirim ke WhatsApp Anda <strong>setelah Anda mengklik tombol konfirmasi</strong>.</p>' +
-          '<div class="rep-field"><span class="rep-label">Jenis Kelamin *</span><div class="rep-radio"><label><input type="radio" name="lc-g" value="Male"> Pria</label><label><input type="radio" name="lc-g" value="Female">Wanita</label></div></div>' +
+          '<div class="rep-field"><span class="rep-label">Jenis Kelamin *</span><div class="rep-radio"><label><input type="radio" name="lc-g" value="Male"> Pria</label><label><input type="radio" name="lc-g" value="Female"> Wanita</label></div></div>' +
           '<div class="rep-field"><label class="rep-label" for="lc-wa">Nomor WhatsApp Aktif *</label><input type="tel" id="lc-wa" class="field-input" inputmode="tel" placeholder="Contoh: 0812XXXXXXXX"></div>' +
           '<div class="rep-field"><label class="rep-label" for="lc-tgl">Tanggal Lahir *</label><input type="date" id="lc-tgl" class="field-input" max="' + todayISO() + '" value="' + esc(tglLahir) + '"><div class="rep-hint">Minimal usia 18 tahun.</div></div>' +
           '<label class="rep-agree" for="lc-agree"><input type="checkbox" id="lc-agree"><span>Ya, saya bersedia menerima <strong>' + REPORT_PLAIN + '</strong> lewat WhatsApp, dan setuju data saya dikirim untuk menyusun laporan.</span></label>' +
           '<div class="rep-err" id="lc-err" role="alert"></div>' +
-          '<button type="button" class="btn-prim gold rep-send" id="lc-send">Simpan Data & Lanjut ke WhatsApp</button>' +
+          '<button type="button" class="btn-prim gold rep-send" id="lc-send">Simpan Data &amp; Lanjut ke WhatsApp</button>' +
           '<div class="legal-disclaimer">Laporan bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris.</div></div>';
         bot(h, 'wide'); setProgress(98);
         const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Belum siap? Tidak apa-apa, Anda boleh menutup chat ini. Jawaban Anda tidak dikirim tanpa persetujuan Anda. 🌿</p>';
@@ -601,9 +716,12 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 
   function reportErr(m) { const e = $('lc-err'); if (!e) return; e.textContent = m || ''; e.classList.toggle('on', !!m); }
 
+  // Format dibaca ulang & dihitung ulang oleh server (Code.gs). Server tidak mempercayai skor dari browser.
   function surveyString() {
-    const names = R.dom.map(function (k) { return B[k].n; }).join(', ') || 'tenang';
-    return 'jalur: P | dominan: ' + names + ' | skor: ' + ORDER.map(function (k) { return k + '=' + R.s[k]; }).join(',') + ' | harapan=' + R.hope + ' | jawaban: ' + ans.map(function (v) { return 'ABCDE'[v]; }).join('') + (R.alert ? ' | ALERT_KRISIS' : '');
+    return 'jalur: P | pola: ' + R.primary + ',' + R.secondary +
+      ' | skor: ' + DIM_ORDER.map(function (k) { return k + '=' + R.dims[k]; }).join(',') +
+      ' | jawaban: ' + ans.map(function (v) { return 'ABCDE'[v]; }).join('') +
+      (R.alert ? ' | ALERT_KRISIS' : '');
   }
 
   function submitReport() {
@@ -618,7 +736,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     const used = parseInt(lsGet('lc_used') || '0', 10);
     if (used >= MAX_USE) { reportErr('Sistem mendeteksi limit akses tercapai. Silakan coba lagi esok hari.'); return; }
 
-    // Tahap 1: hanya menyimpan data, BELUM mengirim WA
+    // Tahap 1: simpan data saja, BELUM mengirim WA
     const payload = withSecret({
       action: 'save_data',
       nama: nama, tgl_lahir: t, gender: gEl.value, wa: w,
@@ -637,7 +755,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       })
       .catch(function (err) {
         reportErr('Data belum terkirim (' + ((err && err.message) || 'koneksi gagal') + '). Periksa internet Anda lalu coba lagi.');
-        send.disabled = false; send.innerHTML = 'Simpan Data & Lanjut ke WhatsApp';
+        send.disabled = false; send.innerHTML = 'Simpan Data &amp; Lanjut ke WhatsApp';
       });
   }
 
@@ -645,12 +763,12 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     const card = $('lc-rep'); if (!card) return;
     setProgress(100);
 
-    const waText = `Halo prayer.my.id, saya ${nama} sudah selesai mengisi refleksi. Mohon kirimkan Laporan Gratis Karakter & Inner Block saya.`;
-    const waLink = `https://wa.me/${WA_BUSINESS}?text=${encodeURIComponent(waText)}`;
+    const waText = 'Halo prayer.my.id, saya ' + nama + ' sudah selesai mengisi refleksi. Mohon kirimkan Laporan Gratis Prayer Pattern & Inner Block saya.';
+    const waLink = 'https://wa.me/' + WA_BUSINESS + '?text=' + encodeURIComponent(waText);
 
     card.innerHTML = '<div class="done"><div class="done-check">✓</div><h4>Data Anda berhasil disimpan</h4>' +
       '<p>Hi <strong>' + esc(nama) + '</strong>, untuk menjaga privasi dan memastikan Anda benar-benar menerima laporan ini, silakan klik tombol di bawah ini. <br><br><strong>Ini akan membuka WhatsApp Anda dan secara otomatis meminta kami mengirimkan laporan Anda.</strong></p>' +
-      '<a class="btn-prim wa-btn" id="lc-wa-link" href="' + waLink + '" target="_blank" rel="noopener">💬 Buka WhatsApp & Terima Laporan Sekarang</a>' +
+      '<a class="btn-prim wa-btn" id="lc-wa-link" href="' + waLink + '" target="_blank" rel="noopener">💬 Buka WhatsApp &amp; Terima Laporan Sekarang</a>' +
       '<div class="must-click"><strong>Penting:</strong> Klik tombol di atas untuk mengonfirmasi. Sistem kami baru akan mengirimkan laporan <em>setelah</em> Anda membuka chat WhatsApp ini, sesuai dengan kebijakan privasi Meta.</div>' +
       '<div class="ig-cta"><p>Jika Anda berkenan, silakan ikuti Instagram kami:</p>' +
       '<a href="https://instagram.com/ifeelsoolucky" target="_blank" rel="noopener" class="ig-link"><span>📸</span> @ifeelsoolucky</a></div></div>';
@@ -662,18 +780,27 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     if (waBtn) {
       waBtn.addEventListener('click', function () {
         track('LC_WhatsAppClick');
-        // FIX: keepalive agar request tetap terkirim walau tab berpindah ke WhatsApp; secret ikut dikirim
+        // keepalive: request tetap terkirim walau tab berpindah ke WhatsApp
         fetch(SCRIPT_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify(withSecret({ action: 'trigger_send_report', wa: w, nama: nama })),
           keepalive: true
-        }).catch(function(err) { console.log('Trigger sent (or failed silently)', err); });
+        }).catch(function (err) { console.log('Trigger sent (or failed silently)', err); });
       });
     }
   }
 
+  function renderPatternList() {
+    const box = $('lc-pat-list'); if (!box) return;
+    box.innerHTML = PAT_ORDER.map(function (k) {
+      const p = PAT[k];
+      return '<div class="pat"><b>' + esc(p.en) + '</b><i>' + esc(p.id) + '</i><p>' + esc(p.tag) + '</p></div>';
+    }).join('');
+  }
+
   function init() {
+    renderPatternList();
     $('lc-close').addEventListener('click', close);
     let scrollTick = false;
     window.addEventListener('scroll', function () {
