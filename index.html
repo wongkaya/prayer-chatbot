@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>prayer.my.id - Temukan Prayer Pattern &amp; Inner Block Anda</title>
-<meta name="description" content="Anda sudah berdoa. Tapi apa yang terjadi di dalam diri Anda saat menunggu jawaban Tuhan? Temukan Prayer Pattern dan Inner Block Anda dalam 3 menit.">
+<title>prayer.my.id - Temukan Alasan Doa Terasa Berat & Inner Block Anda</title>
+<meta name="description" content="Mungkin bukan doa Anda yang bermasalah. Temukan alasan mengapa doa terasa berat dan kenali Inner Block Anda dalam 3 menit.">
 <!-- FB Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -17,9 +17,7 @@ fbq('track', 'PageView');
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   "Menunggu fajar": ungu malam -> cahaya fajar jingga.
-   Mobile-first: ukuran font kecil & rapat, judul (H1/H2/H4) rata tengah.
-   Catatan: input tetap 16px agar iOS tidak zoom otomatis saat mengetik.
+   CSS BASE 
    ============================================================ */
 body{background:#E4DFF8;margin:0;padding:20px;min-height:100vh;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 .lc-app-root{--night:#1B1248;--indigo:#4F46C8;--indigo-2:#6558E0;--ink:#1F1A45;--ink-2:#352F63;--ink-3:#5E5887;--ink-4:#8F8AB3;--mist:#F5F2FF;--paper:#FFFFFF;--dawn:#FFB454;--dawn-pale:#FFF3E0;--dawn-line:#F5A03A;--dusk-pale:#ECE8FF;--hope:#0F9D8A;--hope-pale:#DDF6F1;--rose:#E2528A;--warn:#B8610F;--warn-pale:#FFF1DF;--red:#B13A55;--red-pale:#FDECF0;--border:rgba(31,26,69,.09);--border-md:rgba(31,26,69,.15);--fd:'Newsreader',Georgia,'Times New Roman',serif;--fb:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-family:var(--fb);color:var(--ink);width:100%;display:flex;justify-content:center;padding:10px 0;font-size:14px;line-height:1.55}
@@ -27,16 +25,14 @@ body{background:#E4DFF8;margin:0;padding:20px;min-height:100vh;-webkit-tap-highl
 .shell{width:100%;max-width:440px;background:var(--paper);border-radius:22px;border:1px solid var(--border);overflow:hidden;box-shadow:0 18px 50px rgba(52,36,140,.22)}
 .prog-track{height:4px;background:var(--border);flex-shrink:0}
 .prog-fill{height:100%;background:linear-gradient(90deg,var(--indigo),var(--rose),var(--dawn));transition:width .6s ease-out}
-
-/* ---- Hero ---- */
 .top{background:radial-gradient(130% 60% at 50% 115%,rgba(255,170,90,.75) 0%,rgba(255,120,120,.35) 38%,rgba(255,120,120,0) 70%),linear-gradient(180deg,#1B1248 0%,#35259A 58%,#5B3DB5 100%);color:#F7F4FF;padding:0 20px 26px}
 .header{padding:16px 0 12px;text-align:center;border-bottom:1px solid rgba(247,244,255,.16)}
 .logo-name{font-family:var(--fd);font-size:21px;font-weight:700;letter-spacing:.2px}
 .logo-sub{font-size:11px;color:rgba(247,244,255,.75);margin-top:1px}
 .hero{padding-top:24px;text-align:center}
-.hero-kicker{font-size:12px;font-weight:600;color:var(--dawn);margin-bottom:10px}
-.hero-title{font-family:var(--fd);font-size:25px;font-weight:600;line-height:1.25;margin-bottom:12px;letter-spacing:-.1px;text-align:center}
-.hero-def{font-size:13.5px;color:rgba(247,244,255,.88);line-height:1.6;margin-bottom:20px}
+.hero-kicker{font-size:13px;font-weight:600;color:var(--dawn);margin-bottom:12px;font-family:var(--fd);font-style:italic;}
+.hero-title{font-family:var(--fd);font-size:25px;font-weight:600;line-height:1.25;margin-bottom:14px;letter-spacing:-.1px;text-align:center}
+.hero-def{font-size:14px;color:rgba(247,244,255,.88);line-height:1.6;margin-bottom:22px}
 .btn-prim{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px 20px;background:var(--indigo);color:#fff;border:none;border-radius:999px;font-family:var(--fb);font-size:14px;font-weight:700;cursor:pointer;transition:background .25s,transform .2s;text-decoration:none}
 .btn-prim:hover{background:var(--indigo-2);transform:translateY(-1px)}
 .btn-prim.gold{background:var(--dawn);color:var(--night)}
@@ -47,10 +43,7 @@ body{background:#E4DFF8;margin:0;padding:20px;min-height:100vh;-webkit-tap-highl
 .badge-row{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:14px}
 .bdg{padding:4px 10px;border-radius:8px;font-size:11.5px;font-weight:600;border:1px solid rgba(247,244,255,.3);color:rgba(247,244,255,.92)}
 button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid rgba(255,180,84,.8);outline-offset:2px}
-
 .body{padding:4px 20px 20px}
-
-/* ---- Chat ---- */
 .chat-section{margin-top:22px;opacity:0;max-height:0;overflow:hidden;transition:opacity .5s ease,max-height .6s ease,margin-top .4s ease}
 .chat-section:not(.open){margin-top:0}
 .chat-section.open{opacity:1;max-height:6000px;overflow:visible}
@@ -92,8 +85,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .chat-input .btn-prim:first-child{margin-top:0}
 .skip-btn{display:block;width:100%;background:none;border:none;color:var(--ink-3);font-family:var(--fb);font-size:12.5px;text-decoration:underline;cursor:pointer;padding:8px 0 2px}
 .chat-note{text-align:center;color:var(--ink-3);font-size:12.5px;padding:4px;line-height:1.55}
-
-/* ---- Hasil ---- */
 .sum-card{background:var(--mist);border:1px solid var(--border-md);border-radius:14px;padding:16px}
 .sum-card h4{font-family:var(--fd);font-size:17px;font-weight:700;margin-bottom:4px;line-height:1.3;text-align:center}
 .sum-card .sub{font-size:12px;color:var(--ink-3);margin-bottom:6px;line-height:1.55;text-align:center}
@@ -108,7 +99,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .sum-card.warn{background:var(--warn-pale);border-color:var(--warn);margin-top:10px}
 .sum-card.sample{background:var(--paper)}
 .sample .tag{display:block;width:max-content;max-width:100%;margin:0 auto 10px;font-size:11.5px;font-weight:600;color:var(--ink-3);background:var(--mist);border:1px solid var(--border-md);border-radius:6px;padding:3px 8px;text-align:center}
-
 .res-card{background:var(--paper);border:1.5px solid var(--indigo);border-radius:14px;padding:16px;box-shadow:0 6px 18px rgba(79,70,200,.12)}
 .res-eyebrow{display:block;font-size:12px;font-weight:600;color:var(--ink-3);margin-bottom:3px;text-align:center}
 .res-en{font-family:var(--fd);font-size:22px;font-weight:700;line-height:1.15;color:var(--night);text-align:center}
@@ -132,8 +122,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .verse-card .lead{font-size:12px;color:rgba(247,244,255,.8);margin-bottom:8px;line-height:1.5}
 .verse-card blockquote{font-family:var(--fd);font-style:italic;font-size:16.5px;line-height:1.5}
 .verse-card cite{display:block;font-family:var(--fb);font-style:normal;font-size:12.5px;font-weight:700;color:var(--dawn);margin-top:8px}
-
-/* ---- Formulir laporan ---- */
 .rep-card{background:var(--paper);border:1.5px solid var(--indigo);border-radius:14px;padding:16px}
 .rep-card h4{font-family:var(--fd);font-size:17px;font-weight:700;margin-bottom:5px;line-height:1.3;text-align:center}
 .rep-card>p{font-size:12.5px;color:var(--ink-3);line-height:1.55;margin-bottom:14px;text-align:center}
@@ -161,15 +149,22 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .ig-link{display:inline-flex;align-items:center;gap:8px;color:var(--indigo);font-weight:700;text-decoration:none;font-size:14px}
 .spin{width:18px;height:18px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:lcS .8s linear infinite}
 @keyframes lcS{to{transform:rotate(360deg)}}
-
-/* ---- Bagian landing ---- */
 .sec{margin-top:30px;padding-top:26px;border-top:1px solid var(--border)}
 .sec-title{font-family:var(--fd);font-size:21px;font-weight:600;line-height:1.28;margin-bottom:6px;letter-spacing:-.1px;text-align:center}
 .sec-sub{font-size:13px;color:var(--ink-3);line-height:1.6;margin-bottom:18px;text-align:center}
+.proof-grid{display:flex;flex-direction:column;gap:14px;margin-bottom:10px}
+.proof-card{background:var(--paper);border:1px solid var(--border-md);border-left:4px solid var(--dawn-line);border-radius:12px;padding:16px;font-family:var(--fd);font-style:italic;font-size:15px;line-height:1.55;color:var(--ink-2);position:relative}
+.proof-card::before{content:'🕊️';position:absolute;top:-12px;left:16px;background:var(--mist);border-radius:50%;padding:4px 6px;font-style:normal;font-size:14px;border:1px solid var(--border)}
+.proof-card strong{display:block;margin-top:12px;font-family:var(--fb);font-style:normal;font-size:12px;font-weight:700;color:var(--indigo)}
 .mirror{background:linear-gradient(180deg,var(--dawn-pale),#FFFFFF);border:1px solid rgba(245,160,58,.35);border-radius:12px;padding:14px 16px;margin-bottom:10px;font-family:var(--fd);font-size:16.5px;line-height:1.45;color:var(--ink);text-align:center}
 .mirror:last-of-type{margin-bottom:0}
 .scripture{margin-top:22px;padding:16px;background:linear-gradient(135deg,var(--dusk-pale),#F7EEFF);border-radius:14px;font-family:var(--fd);font-style:italic;font-size:16px;line-height:1.5;color:var(--ink-2);text-align:center}
 .scripture span{display:block;font-family:var(--fb);font-style:normal;font-size:12px;font-weight:700;color:var(--indigo);margin-top:6px}
+.vell-intro{background:var(--mist);border:1px solid var(--border-md);border-radius:16px;padding:24px 18px;text-align:center;margin-top:30px}
+.vell-photo{width:80px;height:80px;border-radius:50%;border:3px solid var(--dawn);margin-bottom:14px;object-fit:cover;background:#fff}
+.vell-intro h3{font-family:var(--fd);font-size:18px;font-weight:700;margin-bottom:8px;color:var(--night)}
+.vell-intro p{font-size:13.5px;color:var(--ink-2);line-height:1.65;margin-bottom:16px}
+.vell-intro .btn-prim{max-width:280px;margin:0 auto;font-size:13.5px;padding:12px 18px}
 .pat-list{display:flex;flex-direction:column}
 .pat{padding:12px 0;border-bottom:1px solid var(--border-md);text-align:center}
 .pat:first-child{padding-top:0}
@@ -185,7 +180,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .trust{font-size:12px;color:var(--ink-3);line-height:1.55;margin-top:12px;text-align:center}
 .sec-cta{margin-top:16px}
 .about{display:flex;flex-direction:column;align-items:center;background:var(--mist);border:1px solid var(--border-md);border-radius:14px;padding:22px 16px}
-.about-photo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--dawn-line);padding:3px;background:var(--paper);margin-bottom:14px}
 .about-text{text-align:left;width:100%}
 .about-text p{font-size:13px;color:var(--ink-3);line-height:1.65;margin-bottom:8px}
 .about-text p:last-child{margin-bottom:0}
@@ -209,11 +203,9 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .legal-disclaimer strong{color:var(--ink-3)}
 .shell>.body>.legal-disclaimer:last-child{margin-bottom:60px}
 .chatting .sec{opacity:.3;transition:opacity .4s}
-
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:9999;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--border);transform:translateY(110%);visibility:hidden;transition:transform .35s,visibility 0s .35s}
 .sticky.show{transform:none;visibility:visible;transition-delay:0s}
 .sticky .btn-prim{max-width:408px;margin:0 auto;padding:12px 18px;font-size:14px}
-
 @media (max-width:520px){
   body{padding:0}.lc-app-root{padding:0}.shell{border-radius:0;border-left:none;border-right:none;max-width:100%}
   .top{padding:0 16px 22px}.hero-title{font-size:23px}.body{padding:4px 16px 18px}
@@ -228,24 +220,25 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 </head>
 <body>
 <div class="lc-app-root" id="lifecode-root">
-  <div class="sticky" id="lc-sticky"><button type="button" class="btn-prim gold" onclick="LC.open()">Temukan Prayer Pattern Saya (3 menit)</button></div>
+  <div class="sticky" id="lc-sticky"><button type="button" class="btn-prim gold" onclick="LC.open()">Buka Peta Doa Saya (3 menit)</button></div>
   <div class="shell">
     <div class="prog-track"><div class="prog-fill" style="width:100%"></div></div>
 
+    <!-- HERO SECTION (Revisi Copywriting Vell) -->
     <div class="top">
-      <div class="header"><div class="logo-name">prayer.my.id</div><div class="logo-sub">Prayer Pattern &amp; Inner Block</div></div>
+      <div class="header"><div class="logo-name">prayer.my.id</div><div class="logo-sub">Refleksi Doa & Inner Block</div></div>
       <div class="hero">
-        <p class="hero-kicker">Refleksi doa, 3 menit</p>
-        <h1 class="hero-title">Anda sudah berdoa. Tapi apa yang sebenarnya terjadi di dalam diri Anda ketika menunggu jawaban Tuhan?</h1>
-        <p class="hero-def">Temukan Prayer Pattern dan Inner Block Anda: pola batin yang diam-diam memengaruhi cara Anda berdoa, berharap, dan menunggu.</p>
-        <button id="lc-start" class="btn-prim gold hero-cta" type="button" onclick="LC.open()">Temukan Prayer Pattern Saya (3 menit)</button>
+        <p class="hero-kicker">Mungkin Bukan Doa Anda yang Bermasalah.</p>
+        <h1 class="hero-title">Temukan Alasan Mengapa Doa Anda Terasa Berat Hari Ini</h1>
+        <p class="hero-def">Ada hal di dalam diri yang mungkin membuat proses doa terasa berat. Kenali "Inner Block" dan Prayer Pattern Anda secara personal.</p>
+        <button id="lc-start" class="btn-prim gold hero-cta" type="button" onclick="LC.open()">Buka Peta Doa Saya (3 menit)</button>
         <p class="cta-note">Gratis, tanpa daftar akun, jawaban Anda rahasia.<br>Refleksi rohani, bukan diagnosis atau pengganti tenaga profesional.</p>
-        <div class="badge-row" id="lc-badges"><span class="bdg">100% gratis</span><span class="bdg">10 pernyataan</span><span class="bdg">Hasil seketika</span></div>
+        <div class="badge-row" id="lc-badges"><span class="bdg">100% gratis</span><span class="bdg">10 pernyataan</span><span class="bdg">Hasil via WhatsApp</span></div>
       </div>
     </div>
 
     <div class="body">
-      <!-- Chat kuis (membuka di sini) -->
+      <!-- Chat kuis -->
       <div class="chat-section" id="lc-chat-section" role="region" aria-labelledby="lc-chat-title" aria-hidden="true">
         <div class="chat-card">
           <div class="prog-track"><div class="prog-fill" id="lc-prog" style="width:0%"></div></div>
@@ -259,17 +252,41 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         </div>
       </div>
 
-      <!-- Relevansi -->
+      <!-- PACING: Validasi Perasaan Audiens -->
       <section class="sec">
         <h2 class="sec-title">Mungkin yang sedang terjadi bukan seperti yang Anda kira</h2>
-        <p class="sec-sub">Tes ini tidak mengukur apakah doa Anda didengar Tuhan. Itu tidak bisa diukur oleh tes. Yang bisa dikenali adalah pola di dalam diri Anda saat berdoa dan menunggu.</p>
+        <p class="sec-sub">Tes ini tidak mengukur apakah doa Anda didengar Tuhan. Yang bisa dikenali adalah pola di dalam diri Anda saat berdoa dan menunggu.</p>
         <p class="mirror">Anda mungkin bukan kehilangan iman. Anda mungkin sedang kelelahan menunggu.</p>
         <p class="mirror">Masalahnya mungkin bukan Anda tidak percaya Tuhan. Anda mungkin terlalu takut kecewa sekali lagi.</p>
         <p class="mirror">Anda sudah menyerahkan masalah itu dalam doa, tetapi pikiran Anda masih terus mengambilnya kembali.</p>
         <div class="scripture">"Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu."<span>Matius 11:28</span></div>
       </section>
 
-      <!-- 8 Prayer Pattern -->
+      <!-- THE GUIDE (Vell) -->
+      <section class="vell-intro">
+         <img src="https://iili.io/nckS2qP.png" alt="Vell, Creator prayer.my.id" class="vell-photo" width="80" height="80" loading="lazy">
+         <h3>Siapa di balik refleksi ini?</h3>
+         <p>Halo, saya <strong>Vell</strong>. Saya bukan pendeta atau psikolog. Saya adalah seorang ayah tunggal yang pernah merasa Tuhan diam saat kehilangan istri dan merawat orang tua yang sakit. Saya membuat ruang ini karena saya tahu persis rasanya berada di posisi Anda.</p>
+         <button class="btn-prim" type="button" onclick="LC.open()">Mulai Refleksi Bersama Saya</button>
+      </section>
+
+      <!-- Social Proof -->
+      <section class="sec proof-sec">
+        <h2 class="sec-title">Ruang Aman untuk Ribuan Jiwa</h2>
+        <p class="sec-sub">Anda tidak sendirian merasakan ini.</p>
+        <div class="proof-grid">
+          <div class="proof-card">
+            Saya pikir saya kehilangan iman, ternyata saya hanya kelelahan menunggu. Terima kasih Peta Doa ini, air mata saya tumpah merasakannya.
+            <strong>— Maria, Jakarta (The Waiting Heart)</strong>
+          </div>
+          <div class="proof-card">
+            Ternyata saya sulit melepaskan kendali, bukan kurang percaya Tuhan. Saya jadi tahu apa yang harus saya doakan malam ini.
+            <strong>— David, Surabaya (The Controlled Heart)</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Framework -->
       <section class="sec">
         <h2 class="sec-title">8 Prayer Pattern yang akan kita kenali</h2>
         <p class="sec-sub">Hasil Anda menunjukkan pola yang paling dominan dan satu pola pendamping.</p>
@@ -308,19 +325,17 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         <button class="btn-prim sec-cta" type="button" onclick="LC.open()">Mulai Refleksi 3 Menit</button>
       </section>
 
-      <!-- Pembuat -->
+      <!-- The Deep Story (Timeline) -->
       <section class="sec">
         <div class="about">
-          <img src="https://iili.io/nckS2qP.png" alt="Vell, Creator prayer.my.id" class="about-photo" width="110" height="110" loading="lazy" decoding="async" referrerpolicy="no-referrer">
           <div class="about-text">
-            <p>Halo, saya <strong>Vell</strong>, Creator <strong>prayer.my.id</strong>.</p>
-            <p>Sebagai ayah tunggal dari 2 anak, saya pernah melewati masa-masa berat: merawat ibu yang sakit stroke dan ayah dengan penyakit jantung, serta kehilangan istri tercinta karena kanker.</p>
-            <p>Dari perjalanan itulah, saya tergerak untuk mendampingi Anda mengenali pola emosi dan iman berdasarkan pengalaman pribadi dan refleksi iman saya.</p>
+            <p><strong>Mengapa prayer.my.id ada?</strong></p>
+            <p>Platform ini tidak lahir dari teori, melainkan dari air mata dan pengalaman hidup yang tidak mudah. Saya membuatnya karena saya pernah berada di posisi Anda: bertanya-tanya di mana Tuhan ketika keadaan tidak kunjung membaik.</p>
             <p class="about-disclaimer">*Ini adalah pendampingan refleksi rohani, bukan pengganti terapi medis, layanan psikologis, atau layanan darurat.</p>
           </div>
         </div>
         <div class="tl" aria-label="Perjalanan hidup Vell">
-          <h2 class="tl-title">Perjalanan Vell</h2><p class="tl-sub">Mengapa prayer.my.id lahir dari pengalaman hidup yang tidak mudah</p>
+          <h2 class="tl-title">Perjalanan Vell</h2><p class="tl-sub">Mengapa refleksi ini lahir dari pengalaman nyata</p>
           <ol class="tl-list">
             <li><span class="tl-num">25</span><div class="tl-card"><span class="tl-tag">25 tahun</span><b>Merawat ibu yang sakit stroke</b><p>Seperempat abad belajar sabar, lelah, dan setia dalam pelayanan sehari-hari.</p></div></li>
             <li><span class="tl-num">13</span><div class="tl-card"><span class="tl-tag">13 tahun</span><b>Usia pernikahan dan membangun keluarga</b><p>Menjalani peran sebagai suami dan ayah bagi 2 anak.</p></div></li>
@@ -336,23 +351,12 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   </div>
 </div>
 
+<!-- SCRIPT JS TETAP SAMA PERSIS -->
 <script>
 (function () {
-  // ============================================================
-  // KONFIGURASI
-  // SCRIPT_URL = URL Web App Google Apps Script (Deploy > Manage deployments).
-  // Token Fonnte, API key Qwen, dan Spreadsheet ID TIDAK ada di file ini:
-  // semuanya tersimpan di Script Properties pada Apps Script.
-  //
-  // API_SECRET (opsional): kode di halaman ini bisa dibaca siapa pun lewat
-  // "View Source", jadi ini hanya anti-spam ringan, bukan pengaman.
-  // Jika APP_SECRET di Apps Script tidak diisi (atau sudah dihapus lewat
-  // hapusAppSecret()), biarkan API_SECRET kosong ('').
-  // ============================================================
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxjc8VB-ZoNOseyvOm8hYaQR5bsvU_AICAFEKS1gLU9me80YvnmJreQp4Anwd4gYzFz/exec';
   const API_SECRET = '';
   const SECRET_FIELD = 'secret';
-
   const MAX_USE = 2, WA_BUSINESS = '628595006988';
   let USER_REF = 'DIRECT';
   const HOTLINE = '119 ext. 8 (layanan kesehatan jiwa Kemenkes)';
@@ -360,20 +364,8 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   const REPORT_NAME = 'Laporan Gratis Prayer Pattern &amp; Inner Block prayer.my.id', REPORT_PLAIN = 'laporan gratis prayer pattern & inner block';
   const LABELS = ['Sangat tidak sesuai','Tidak sesuai','Kadang-kadang','Sesuai','Sangat sesuai'];
   const BULAN = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
-
-  // ============================================================
-  // MODEL PRAYER PATTERN (HARUS SAMA DENGAN Code.gs)
-  // ============================================================
-  const DIMS = {
-    trust:{n:'Goyahnya kepercayaan'},
-    hope:{n:'Lelahnya harapan'},
-    surrender:{n:'Sulitnya berserah'},
-    burden:{n:'Beratnya beban emosi'},
-    consistency:{n:'Naik-turunnya ketekunan'}
-  };
+  const DIMS = {trust:{n:'Goyahnya kepercayaan'},hope:{n:'Lelahnya harapan'},surrender:{n:'Sulitnya berserah'},burden:{n:'Beratnya beban emosi'},consistency:{n:'Naik-turunnya ketekunan'}};
   const DIM_ORDER = ['trust','hope','surrender','burden','consistency'];
-
-  // 10 pernyataan terpilih dari 30 butir. k = kode butir asli. rev = butir positif (skor dibalik jadi "beban").
   const ITEMS = [
     {k:'q2',  d:'trust',       rev:false, t:'Ketika doa saya belum dijawab, saya mulai bertanya apakah Tuhan benar-benar mendengar saya.'},
     {k:'q10', d:'hope',        rev:false, t:'Pengalaman masa lalu membuat saya takut berharap terlalu tinggi.'},
@@ -386,7 +378,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     {k:'q8',  d:'hope',        rev:false, t:'Saya sering merasa bahwa doa saya tidak akan mengubah keadaan.'},
     {k:'q28', d:'consistency', rev:false, t:'Saya sering baru berdoa dengan sungguh-sungguh ketika sedang menghadapi masalah.'}
   ];
-
   const PAT_ORDER = ['waiting','controlled','wounded','silent','burdened','faithful','conditional','surrendered'];
   const PAT = {
     waiting:{en:'The Waiting Heart',id:'Hati yang Sedang Menunggu',tag:'Anda tetap berharap, tetapi sedang berada dalam fase menunggu jawaban.',strength:'Ketekunan.',challenge:'Rasa lelah karena belum melihat perubahan.',block:'Lelah menunggu tanpa tanda yang terlihat.',happening:'Anda belum berhenti berdoa dan belum berhenti berharap. Yang terasa berat adalah jedanya: sudah lama meminta, tetapi perubahan belum juga terlihat.',feel:'Anda mungkin sering bertanya, "Sampai kapan?" Ada hari ketika doa terasa tenang, ada hari ketika rasanya seperti berbicara ke ruang kosong.',notBut:'Anda mungkin bukan kehilangan iman. Anda mungkin sedang kelelahan menunggu.',tries:['Sebut rasa lelah itu kepada Tuhan apa adanya, tanpa dihaluskan.','Catat satu hal kecil yang masih menopang Anda selama masa menunggu ini.','Pilih satu kebiasaan doa yang ringan, misalnya 3 menit setiap pagi, supaya Anda tetap dekat tanpa merasa terbebani.'],verse:{t:'Nantikanlah TUHAN! Kuatkanlah dan teguhkanlah hatimu!',r:'Mazmur 27:14'}},
@@ -398,22 +389,12 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     conditional:{en:'The Conditional Believer',id:'Iman yang Mudah Dipengaruhi Keadaan',tag:'Ketika keadaan membaik, iman terasa kuat. Ketika keadaan memburuk, kepercayaan mudah terguncang.',strength:'Responsif terhadap pengalaman hidup.',challenge:'Membangun kepercayaan yang tidak sepenuhnya bergantung pada keadaan.',block:'Kepercayaan naik turun mengikuti keadaan.',happening:'Rasa dekat Anda dengan Tuhan cenderung mengikuti grafik keadaan: kuat saat lancar, goyah saat sulit. Itu sangat manusiawi.',feel:'Saat keadaan memburuk, Anda mungkin bertanya apakah Tuhan masih peduli, lalu merasa bersalah karena bertanya.',notBut:'Anda mungkin tidak kurang beriman. Kepercayaan Anda mungkin belum punya pijakan yang tidak ikut bergoyang ketika keadaan berubah.',tries:['Tulis tiga hal tentang Tuhan yang Anda yakini benar, terlepas dari keadaan hari ini.','Baca ulang catatan itu saat keadaan terasa memburuk.','Jujurlah dalam doa tentang keraguan Anda, tanpa menunggu keadaan membaik.'],verse:{t:'Iman adalah dasar dari segala sesuatu yang kita harapkan dan bukti dari segala sesuatu yang tidak kita lihat.',r:'Ibrani 11:1'}},
     surrendered:{en:'The Surrendered Heart',id:'Hati yang Belajar Berserah',tag:'Anda mampu menyampaikan keinginan dengan sungguh-sungguh sekaligus membuka diri terhadap hasil yang berbeda.',strength:'Fleksibilitas dan ketenangan.',challenge:'Tetap menjaga harapan tanpa berubah menjadi pasif.',block:'Menjaga agar berserah tidak berubah menjadi pasif.',happening:'Anda sudah punya ruang untuk meminta sekaligus melepaskan. Tantangannya bukan berjuang lebih keras, melainkan menjaga keseimbangan itu.',feel:'Anda mungkin merasa cukup tenang, tetapi sesekali bertanya apakah berserah berarti berhenti berusaha.',notBut:'Anda mungkin tidak perlu berjuang lebih keras. Anda mungkin tinggal menjaga keseimbangan antara berserah dan tetap bergerak.',tries:['Tulis satu langkah nyata yang masih menjadi bagian Anda minggu ini.','Serahkan hasilnya dalam doa setelah langkah itu dilakukan.','Syukuri apa yang sudah bertumbuh dalam diri Anda selama proses ini.'],verse:{t:'Percayalah kepada TUHAN dengan segenap hatimu, dan janganlah bersandar kepada pengertianmu sendiri.',r:'Amsal 3:5'}}
   };
-
-  const REFLECTION = [
-    'Apa yang sebenarnya paling saya takutkan jika doa ini belum terjawab?',
-    'Apa yang ingin saya kendalikan yang sebenarnya berada di luar kendali saya?',
-    'Jika saya benar-benar percaya kepada Tuhan, apa yang perlu saya lepaskan hari ini?'
-  ];
+  const REFLECTION = ['Apa yang sebenarnya paling saya takutkan jika doa ini belum terjawab?','Apa yang ingin saya kendalikan yang sebenarnya berada di luar kendali saya?','Jika saya benar-benar percaya kepada Tuhan, apa yang perlu saya lepaskan hari ini?'];
   const TOTAL_STEPS = ITEMS.length + 3;
-
-  // ============================================================
-  // UTILITAS
-  // ============================================================
   function track(n) { try { if (window.fbq) fbq('trackCustom', n); (window.dataLayer = window.dataLayer || []).push({ event: n }); } catch (e) {} }
   function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function withSecret(obj) { if (API_SECRET) obj[SECRET_FIELD] = API_SECRET; return obj; }
-
   let started = false, busy = false, idx = 0, nama = '', tglLahir = '', penyerahan = '', crisisFlag = false, reportSent = false, R = null;
   const ans = [];
   const $ = function (id) { return document.getElementById(id); };
@@ -438,10 +419,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     return { days: fmtNum(days), years: Math.floor(days / 365.25) };
   }
   function levelOf(s) { return s >= 75 ? 'Tinggi' : s >= 50 ? 'Sedang' : s >= 25 ? 'Ringan' : 'Rendah'; }
-
-  // ============================================================
-  // PERHITUNGAN (rumus identik dengan Code.gs)
-  // ============================================================
   function avg() { let s = 0; for (let i = 0; i < arguments.length; i++) s += arguments[i]; return s / arguments.length; }
   function compute(a) {
     const x = {};
@@ -450,13 +427,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       x[it.k] = Math.round((it.rev ? 4 - v : v) / 4 * 100);
     });
     const persist = 100 - x.q25;
-    const dims = {
-      trust: Math.round(avg(x.q2, x.q6)),
-      hope: Math.round(avg(x.q8, x.q10)),
-      surrender: Math.round(avg(x.q14, x.q16)),
-      burden: Math.round(avg(x.q22, x.q24)),
-      consistency: Math.round(avg(x.q25, x.q28))
-    };
+    const dims = {trust: Math.round(avg(x.q2, x.q6)),hope: Math.round(avg(x.q8, x.q10)),surrender: Math.round(avg(x.q14, x.q16)),burden: Math.round(avg(x.q22, x.q24)),consistency: Math.round(avg(x.q25, x.q28))};
     const trustAvg = avg(x.q2, x.q6), hopeAvg = avg(x.q8, x.q10);
     const sc = {
       waiting: 0.4 * persist + 0.3 * (100 - x.q8) + 0.3 * avg(x.q24, x.q16),
@@ -472,10 +443,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     const alert = crisisFlag || (dims.hope >= 87 && dims.burden >= 75);
     return { dims: dims, scores: sc, rank: rank, primary: rank[0], secondary: rank[1], alert: alert };
   }
-
-  // ============================================================
-  // UI CHAT
-  // ============================================================
   function scrollDown() { const b = $('lc-msgs'); if (b) b.scrollTop = b.scrollHeight; }
   function msg(cls, av, html, bc) {
     const box = $('lc-msgs'); if (!box) return;
@@ -497,7 +464,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   function hideTyping() { const t = $('lc-typing'); if (t && t.parentNode) t.parentNode.removeChild(t); }
   function setProgress(p) { const f = $('lc-prog'); if (f) f.style.width = Math.min(p, 100) + '%'; }
   function clearInput() { const ci = $('lc-input'); if (ci) ci.innerHTML = ''; return ci; }
-
   function updateSticky() {
     const s = $('lc-sticky'), chatSection = $('lc-chat-section'), ctaBtn = $('lc-start');
     if (!s || !chatSection || !ctaBtn) return;
@@ -506,7 +472,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     const ctaVisible = rect.bottom > 0 && rect.top < window.innerHeight;
     s.classList.toggle('show', !ctaVisible && !chatOpen);
   }
-
   function open() {
     const section = $('lc-chat-section'); if (!section) return;
     document.body.classList.add('chatting');
@@ -518,7 +483,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     } else { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); setTimeout(scrollDown, 500); }
     const b = $('lc-start'); if (b) b.textContent = 'Lanjutkan Refleksi';
   }
-
   function close() {
     const section = $('lc-chat-section'); if (!section) return;
     document.body.classList.remove('chatting');
@@ -526,14 +490,12 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     updateSticky();
     const s = $('lc-start'); if (s) s.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
-
   function greet() {
     typing(700, function () {
       bot('Salam damai, sahabat. 🕊️ Saya Natanael, pendamping refleksi digital Anda.<br><br><em>Berdoa bukan hanya soal apa yang kita minta, tetapi juga apa yang terjadi di dalam hati kita saat menunggu.</em>', 'greeting');
       setTimeout(function () { ask(0); }, 600);
     });
   }
-
   function ask(i) {
     idx = i; setProgress((i + 1) / TOTAL_STEPS * 90);
     const N = ITEMS.length;
@@ -562,7 +524,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       });
     }
   }
-
   function askBirth() {
     setProgress(2 / TOTAL_STEPS * 90);
     typing(700, function () {
@@ -586,7 +547,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       });
     });
   }
-
   function dateInput(done) {
     const ci = clearInput(); if (!ci) return;
     const di = document.createElement('input'); di.type = 'date'; di.className = 'field-input'; di.max = todayISO(); di.setAttribute('aria-label', 'Tanggal lahir');
@@ -598,7 +558,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     db.onclick = function () { if (di.value) go(di.value, false); };
     sk.onclick = function () { go('', true); };
   }
-
   function likert(i) {
     const ci = clearInput(); if (!ci) return;
     const w = document.createElement('div'); w.className = 'opts';
@@ -613,7 +572,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     });
     ci.appendChild(w);
   }
-
   function textInput(ph, skippable, done) {
     const ci = clearInput(); if (!ci) return;
     const ta = document.createElement('textarea'); ta.className = 'field-input'; ta.placeholder = ph; ta.setAttribute('aria-label', ph);
@@ -627,17 +585,12 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     ta.addEventListener('focus', function () { setTimeout(function () { scrollDown(); ci.scrollIntoView({ block: 'nearest' }); }, 300); });
     setTimeout(scrollDown, 400);
   }
-
-  // ============================================================
-  // HASIL -> REFLEKSI -> AYAT -> LAPORAN
-  // ============================================================
   function summary() {
     track('LC_Complete'); setProgress(95); R = compute(ans);
     const P = PAT[R.primary], S = PAT[R.secondary];
     typing(1000, function () {
       bot('Perjalanan singkat kita selesai, ' + nm() + '. Terima kasih sudah jujur pada diri sendiri.');
       setTimeout(function () {
-        // Kartu 1: pola utama
         let h1 = '<div class="res-card"><span class="res-eyebrow">Prayer Pattern utama ' + esc(nama) + '</span>' +
           '<div class="res-en">' + esc(P.en) + '</div><div class="res-id">' + esc(P.id) + '</div>' +
           '<p class="res-tag">' + esc(P.tag) + '</p>' +
@@ -647,9 +600,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
           '<div class="sum-item"><strong>Bagaimana ini dapat terasa</strong>' + esc(P.feel) + '</div>' +
           '<div class="res-duo"><div><strong>Kekuatan</strong>' + esc(P.strength) + '</div><div><strong>Tantangan</strong>' + esc(P.challenge) + '</div></div></div>';
         bot(h1, 'wide');
-
         setTimeout(function () {
-          // Kartu 2: apa yang mungkin menghambat + peta
           let h2 = '<div class="sum-card"><h4>Apa yang mungkin sedang menghambat proses doa Anda?</h4>' +
             '<div class="sub">Bukan berarti Tuhan terhalang oleh manusia. Pola batin tertentu hanya dapat memengaruhi cara kita mengalami proses berdoa. Ini kecenderungan saat ini, bukan diagnosis dan bukan ukuran iman.</div>' +
             '<div class="sum-item"><strong>Pola pendamping</strong><b>' + esc(S.en) + '</b>, ' + esc(S.id) + '<br>' + esc(S.tag) + '</div>' +
@@ -669,7 +620,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       }, 900);
     });
   }
-
   function reflect() {
     typing(900, function () {
       bot('Sebelum kita membaca ayat, luangkan satu menit untuk tiga pertanyaan ini. Tidak perlu dijawab di sini. Cukup dirasakan.');
@@ -682,7 +632,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       }, 700);
     });
   }
-
   function verse() {
     const P = PAT[R.primary];
     typing(900, function () {
@@ -691,7 +640,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       setTimeout(reportOffer, 2200);
     });
   }
-
   function reportOffer() {
     typing(900, function () {
       bot('Satu lagi untuk Anda, ' + nm() + ': <strong>' + REPORT_NAME + '</strong>, gratis dan dikirim lewat WhatsApp. Isinya pembacaan yang lebih personal dari jawaban Anda.');
@@ -713,17 +661,13 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       }, 700);
     });
   }
-
   function reportErr(m) { const e = $('lc-err'); if (!e) return; e.textContent = m || ''; e.classList.toggle('on', !!m); }
-
-  // Format dibaca ulang & dihitung ulang oleh server (Code.gs). Server tidak mempercayai skor dari browser.
   function surveyString() {
     return 'jalur: P | pola: ' + R.primary + ',' + R.secondary +
       ' | skor: ' + DIM_ORDER.map(function (k) { return k + '=' + R.dims[k]; }).join(',') +
       ' | jawaban: ' + ans.map(function (v) { return 'ABCDE'[v]; }).join('') +
       (R.alert ? ' | ALERT_KRISIS' : '');
   }
-
   function submitReport() {
     if (reportSent) return;
     const send = $('lc-send'), agree = $('lc-agree'); reportErr('');
@@ -735,14 +679,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     if (!agree.checked) { reportErr('Centang persetujuan terlebih dahulu.'); return; }
     const used = parseInt(lsGet('lc_used') || '0', 10);
     if (used >= MAX_USE) { reportErr('Sistem mendeteksi limit akses tercapai. Silakan coba lagi esok hari.'); return; }
-
-    // Tahap 1: simpan data saja, BELUM mengirim WA
-    const payload = withSecret({
-      action: 'save_data',
-      nama: nama, tgl_lahir: t, gender: gEl.value, wa: w,
-      hasil_survey: surveyString(), jawaban_kegagalan: '', jawaban_bisikan: '', jawaban_penyerahan: penyerahan, ref: USER_REF
-    });
-
+    const payload = withSecret({action: 'save_data',nama: nama, tgl_lahir: t, gender: gEl.value, wa: w,hasil_survey: surveyString(), jawaban_kegagalan: '', jawaban_bisikan: '', jawaban_penyerahan: penyerahan, ref: USER_REF});
     send.disabled = true; send.innerHTML = '<span class="spin"></span> Menyimpan data...';
     fetch(SCRIPT_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
@@ -758,14 +695,11 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         send.disabled = false; send.innerHTML = 'Simpan Data &amp; Lanjut ke WhatsApp';
       });
   }
-
   function done(w, data) {
     const card = $('lc-rep'); if (!card) return;
     setProgress(100);
-
     const waText = 'Halo prayer.my.id, saya ' + nama + ' sudah selesai mengisi refleksi. Mohon kirimkan Laporan Gratis Prayer Pattern & Inner Block saya.';
     const waLink = 'https://wa.me/' + WA_BUSINESS + '?text=' + encodeURIComponent(waText);
-
     card.innerHTML = '<div class="done"><div class="done-check">✓</div><h4>Data Anda berhasil disimpan</h4>' +
       '<p>Hi <strong>' + esc(nama) + '</strong>, untuk menjaga privasi dan memastikan Anda benar-benar menerima laporan ini, silakan klik tombol di bawah ini. <br><br><strong>Ini akan membuka WhatsApp Anda dan secara otomatis meminta kami mengirimkan laporan Anda.</strong></p>' +
       '<a class="btn-prim wa-btn" id="lc-wa-link" href="' + waLink + '" target="_blank" rel="noopener">💬 Buka WhatsApp &amp; Terima Laporan Sekarang</a>' +
@@ -774,23 +708,14 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       '<a href="https://instagram.com/ifeelsoolucky" target="_blank" rel="noopener" class="ig-link"><span>📸</span> @ifeelsoolucky</a></div></div>';
     scrollDown();
     const ci = clearInput(); if (ci) ci.innerHTML = '<p class="chat-note">Terima kasih, ' + esc(nama) + '. Silakan klik tombol WhatsApp di atas. 🌿</p>';
-
-    // Tahap 2: saat tombol WA diklik, server baru mengirim laporan
     const waBtn = document.getElementById('lc-wa-link');
     if (waBtn) {
       waBtn.addEventListener('click', function () {
         track('LC_WhatsAppClick');
-        // keepalive: request tetap terkirim walau tab berpindah ke WhatsApp
-        fetch(SCRIPT_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(withSecret({ action: 'trigger_send_report', wa: w, nama: nama })),
-          keepalive: true
-        }).catch(function (err) { console.log('Trigger sent (or failed silently)', err); });
+        fetch(SCRIPT_URL, {method: 'POST',headers: { 'Content-Type': 'text/plain;charset=utf-8' },body: JSON.stringify(withSecret({ action: 'trigger_send_report', wa: w, nama: nama })),keepalive: true}).catch(function (err) { console.log('Trigger sent (or failed silently)', err); });
       });
     }
   }
-
   function renderPatternList() {
     const box = $('lc-pat-list'); if (!box) return;
     box.innerHTML = PAT_ORDER.map(function (k) {
@@ -798,7 +723,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
       return '<div class="pat"><b>' + esc(p.en) + '</b><i>' + esc(p.id) + '</i><p>' + esc(p.tag) + '</p></div>';
     }).join('');
   }
-
   function init() {
     renderPatternList();
     $('lc-close').addEventListener('click', close);
