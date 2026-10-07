@@ -16,9 +16,7 @@ fbq('track', 'PageView');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   CSS BASE 
-   ============================================================ */
+/* CSS TETAP SAMA (TIDAK ADA PERUBAHAN) */
 body{background:#E4DFF8;margin:0;padding:20px;min-height:100vh;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 .lc-app-root{--night:#1B1248;--indigo:#4F46C8;--indigo-2:#6558E0;--ink:#1F1A45;--ink-2:#352F63;--ink-3:#5E5887;--ink-4:#8F8AB3;--mist:#F5F2FF;--paper:#FFFFFF;--dawn:#FFB454;--dawn-pale:#FFF3E0;--dawn-line:#F5A03A;--dusk-pale:#ECE8FF;--hope:#0F9D8A;--hope-pale:#DDF6F1;--rose:#E2528A;--warn:#B8610F;--warn-pale:#FFF1DF;--red:#B13A55;--red-pale:#FDECF0;--border:rgba(31,26,69,.09);--border-md:rgba(31,26,69,.15);--fd:'Newsreader',Georgia,'Times New Roman',serif;--fb:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-family:var(--fb);color:var(--ink);width:100%;display:flex;justify-content:center;padding:10px 0;font-size:14px;line-height:1.55}
 .lc-app-root *{box-sizing:border-box;margin:0;padding:0}
@@ -224,7 +222,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   <div class="shell">
     <div class="prog-track"><div class="prog-fill" style="width:100%"></div></div>
 
-    <!-- HERO SECTION (Revisi Copywriting Vell) -->
+    <!-- HERO SECTION -->
     <div class="top">
       <div class="header"><div class="logo-name">prayer.my.id</div><div class="logo-sub">Refleksi Doa & Inner Block</div></div>
       <div class="hero">
@@ -238,20 +236,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     </div>
 
     <div class="body">
-      <!-- Chat kuis -->
-      <div class="chat-section" id="lc-chat-section" role="region" aria-labelledby="lc-chat-title" aria-hidden="true">
-        <div class="chat-card">
-          <div class="prog-track"><div class="prog-fill" id="lc-prog" style="width:0%"></div></div>
-          <div class="chat-head">
-            <div class="chat-ava">🕊️</div>
-            <div class="chat-title"><h3 id="lc-chat-title">PRAY</h3><p>Pendamping refleksi digital</p></div>
-            <button type="button" class="chat-close" id="lc-close" aria-label="Tutup chat refleksi">✕</button>
-          </div>
-          <div class="chat-msgs" id="lc-msgs" role="log" aria-live="polite"></div>
-          <div class="chat-input" id="lc-input"></div>
-        </div>
-      </div>
-
       <!-- PACING: Validasi Perasaan Audiens -->
       <section class="sec">
         <h2 class="sec-title">Mungkin yang sedang terjadi bukan seperti yang Anda kira</h2>
@@ -269,6 +253,20 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
          <p>Halo, saya <strong>Vell</strong>. Saya bukan pendeta atau psikolog. Saya adalah seorang ayah tunggal yang pernah merasa Tuhan diam saat kehilangan istri dan merawat orang tua yang sakit. Saya membuat ruang ini karena saya tahu persis rasanya berada di posisi Anda.</p>
          <button class="btn-prim" type="button" onclick="LC.open()">Mulai Refleksi Bersama Saya</button>
       </section>
+
+      <!-- Chat kuis (DIPINDAH KE SINI: Tepat di bawah Vell) -->
+      <div class="chat-section" id="lc-chat-section" role="region" aria-labelledby="lc-chat-title" aria-hidden="true">
+        <div class="chat-card">
+          <div class="prog-track"><div class="prog-fill" id="lc-prog" style="width:0%"></div></div>
+          <div class="chat-head">
+            <div class="chat-ava">🕊️</div>
+            <div class="chat-title"><h3 id="lc-chat-title">PRAY</h3><p>Pendamping refleksi digital</p></div>
+            <button type="button" class="chat-close" id="lc-close" aria-label="Tutup chat refleksi">✕</button>
+          </div>
+          <div class="chat-msgs" id="lc-msgs" role="log" aria-live="polite"></div>
+          <div class="chat-input" id="lc-input"></div>
+        </div>
+      </div>
 
       <!-- Social Proof -->
       <section class="sec proof-sec">
@@ -351,7 +349,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   </div>
 </div>
 
-<!-- SCRIPT JS TETAP SAMA PERSIS -->
+<!-- SCRIPT JS (REVISI PADA FUNGSI OPEN & CLOSE) -->
 <script>
 (function () {
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxjc8VB-ZoNOseyvOm8hYaQR5bsvU_AICAFEKS1gLU9me80YvnmJreQp4Anwd4gYzFz/exec';
@@ -472,6 +470,8 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     const ctaVisible = rect.bottom > 0 && rect.top < window.innerHeight;
     s.classList.toggle('show', !ctaVisible && !chatOpen);
   }
+  
+  // REVISI FUNGSI OPEN (In-Place Smooth Scroll)
   function open() {
     const section = $('lc-chat-section'); if (!section) return;
     document.body.classList.add('chatting');
@@ -479,17 +479,27 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     updateSticky();
     if (!started) {
       started = true; track('LC_Start');
-      setTimeout(function () { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); setTimeout(greet, 700); }, 400);
-    } else { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); setTimeout(scrollDown, 500); }
+      // Tunggu transisi CSS bekerja sedikit sebelum scroll, gunakan block: 'center'
+      setTimeout(function () { 
+        section.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+        setTimeout(greet, 700); 
+      }, 500);
+    } else { 
+      setTimeout(function() { section.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100);
+      setTimeout(scrollDown, 600); 
+    }
     const b = $('lc-start'); if (b) b.textContent = 'Lanjutkan Refleksi';
   }
+
+  // REVISI FUNGSI CLOSE
   function close() {
     const section = $('lc-chat-section'); if (!section) return;
     document.body.classList.remove('chatting');
     section.classList.remove('open'); section.setAttribute('aria-hidden', 'true');
     updateSticky();
-    const s = $('lc-start'); if (s) s.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const s = $('lc-start'); if (s) setTimeout(function(){ s.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 400);
   }
+
   function greet() {
     typing(700, function () {
       bot('Salam damai, sahabat. 🕊️ Saya Natanael, pendamping refleksi digital Anda.<br><br><em>Berdoa bukan hanya soal apa yang kita minta, tetapi juga apa yang terjadi di dalam hati kita saat menunggu.</em>', 'greeting');
