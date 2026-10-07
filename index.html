@@ -16,7 +16,7 @@ fbq('track', 'PageView');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* CSS TETAP SAMA (TIDAK ADA PERUBAHAN) */
+/* CSS TETAP SAMA */
 body{background:#E4DFF8;margin:0;padding:20px;min-height:100vh;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 .lc-app-root{--night:#1B1248;--indigo:#4F46C8;--indigo-2:#6558E0;--ink:#1F1A45;--ink-2:#352F63;--ink-3:#5E5887;--ink-4:#8F8AB3;--mist:#F5F2FF;--paper:#FFFFFF;--dawn:#FFB454;--dawn-pale:#FFF3E0;--dawn-line:#F5A03A;--dusk-pale:#ECE8FF;--hope:#0F9D8A;--hope-pale:#DDF6F1;--rose:#E2528A;--warn:#B8610F;--warn-pale:#FFF1DF;--red:#B13A55;--red-pale:#FDECF0;--border:rgba(31,26,69,.09);--border-md:rgba(31,26,69,.15);--fd:'Newsreader',Georgia,'Times New Roman',serif;--fb:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-family:var(--fb);color:var(--ink);width:100%;display:flex;justify-content:center;padding:10px 0;font-size:14px;line-height:1.55}
 .lc-app-root *{box-sizing:border-box;margin:0;padding:0}
@@ -160,8 +160,9 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .scripture span{display:block;font-family:var(--fb);font-style:normal;font-size:12px;font-weight:700;color:var(--indigo);margin-top:6px}
 .vell-intro{background:var(--mist);border:1px solid var(--border-md);border-radius:16px;padding:24px 18px;text-align:center;margin-top:30px}
 .vell-photo{width:80px;height:80px;border-radius:50%;border:3px solid var(--dawn);margin-bottom:14px;object-fit:cover;background:#fff}
-.vell-intro h3{font-family:var(--fd);font-size:18px;font-weight:700;margin-bottom:8px;color:var(--night)}
-.vell-intro p{font-size:13.5px;color:var(--ink-2);line-height:1.65;margin-bottom:16px}
+.vell-intro h3{font-family:var(--fd);font-size:18px;font-weight:700;margin-bottom:12px;color:var(--night)}
+.vell-intro p{font-size:13.5px;color:var(--ink-2);line-height:1.65;margin-bottom:14px}
+.vell-intro p:last-of-type{margin-bottom:18px}
 .vell-intro .btn-prim{max-width:280px;margin:0 auto;font-size:13.5px;padding:12px 18px}
 .pat-list{display:flex;flex-direction:column}
 .pat{padding:12px 0;border-bottom:1px solid var(--border-md);text-align:center}
@@ -246,21 +247,23 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         <div class="scripture">"Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu."<span>Matius 11:28</span></div>
       </section>
 
-      <!-- THE GUIDE (Vell) -->
+      <!-- THE GUIDE (Vell - REVISI COPYWRITING) -->
       <section class="vell-intro">
          <img src="https://iili.io/nckS2qP.png" alt="Vell, Creator prayer.my.id" class="vell-photo" width="80" height="80" loading="lazy">
          <h3>Siapa di balik refleksi ini?</h3>
-         <p>Halo, saya <strong>Vell</strong>. Saya bukan pendeta atau psikolog. Saya adalah seorang single parent yang pernah merasa Tuhan diam saat kehilangan istri karena sakit, lahir dari keluarga yang broken home dan merawat 2 orang tua yang juga sakit hingga Tuhan memanggil. Saya membuat ruang ini karena saya tahu persis rasanya berada di posisi Anda.</p>
+         <p>Halo, saya <strong>Vell</strong>. Saya bukan pendeta atau psikolog.</p>
+         <p>Saya tumbuh dari keluarga <em>broken home</em>. Saya merawat kedua orang tua saya yang sakit hingga Tuhan memanggil mereka. Saya juga seorang <em>single parent</em> yang pernah merasa Tuhan begitu diam saat kehilangan istri karena sakit.</p>
+         <p><strong>Saya membuat ruang ini karena saya tahu persis rasanya berada di posisi Anda.</strong></p>
          <button class="btn-prim" type="button" onclick="LC.open()">Mulai Refleksi Bersama Saya</button>
       </section>
 
-      <!-- Chat kuis (DIPINDAH KE SINI: Tepat di bawah Vell) -->
+      <!-- Chat kuis -->
       <div class="chat-section" id="lc-chat-section" role="region" aria-labelledby="lc-chat-title" aria-hidden="true">
         <div class="chat-card">
           <div class="prog-track"><div class="prog-fill" id="lc-prog" style="width:0%"></div></div>
           <div class="chat-head">
             <div class="chat-ava">🕊️</div>
-            <div class="chat-title"><h3 id="lc-chat-title">PRAY</h3><p>Asisten digital Anda</p></div>
+            <div class="chat-title"><h3 id="lc-chat-title">PRAY</h3><p>Pendamping refleksi digital</p></div>
             <button type="button" class="chat-close" id="lc-close" aria-label="Tutup chat refleksi">✕</button>
           </div>
           <div class="chat-msgs" id="lc-msgs" role="log" aria-live="polite"></div>
@@ -349,7 +352,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
   </div>
 </div>
 
-<!-- SCRIPT JS (REVISI PADA FUNGSI OPEN & CLOSE) -->
+<!-- SCRIPT JS TETAP SAMA -->
 <script>
 (function () {
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxjc8VB-ZoNOseyvOm8hYaQR5bsvU_AICAFEKS1gLU9me80YvnmJreQp4Anwd4gYzFz/exec';
@@ -470,8 +473,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     const ctaVisible = rect.bottom > 0 && rect.top < window.innerHeight;
     s.classList.toggle('show', !ctaVisible && !chatOpen);
   }
-  
-  // REVISI FUNGSI OPEN (In-Place Smooth Scroll)
   function open() {
     const section = $('lc-chat-section'); if (!section) return;
     document.body.classList.add('chatting');
@@ -479,19 +480,13 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     updateSticky();
     if (!started) {
       started = true; track('LC_Start');
-      // Tunggu transisi CSS bekerja sedikit sebelum scroll, gunakan block: 'center'
-      setTimeout(function () { 
-        section.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
-        setTimeout(greet, 700); 
-      }, 500);
+      setTimeout(function () { section.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(greet, 700); }, 500);
     } else { 
       setTimeout(function() { section.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100);
       setTimeout(scrollDown, 600); 
     }
     const b = $('lc-start'); if (b) b.textContent = 'Lanjutkan Refleksi';
   }
-
-  // REVISI FUNGSI CLOSE
   function close() {
     const section = $('lc-chat-section'); if (!section) return;
     document.body.classList.remove('chatting');
@@ -499,7 +494,6 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
     updateSticky();
     const s = $('lc-start'); if (s) setTimeout(function(){ s.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 400);
   }
-
   function greet() {
     typing(700, function () {
       bot('Salam damai, sahabat. 🕊️ Saya Natanael, pendamping refleksi digital Anda.<br><br><em>Berdoa bukan hanya soal apa yang kita minta, tetapi juga apa yang terjadi di dalam hati kita saat menunggu.</em>', 'greeting');
