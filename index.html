@@ -16,7 +16,6 @@ fbq('track', 'PageView');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* CSS TETAP SAMA */
 body{background:#E4DFF8;margin:0;padding:20px;min-height:100vh;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 .lc-app-root{--night:#1B1248;--indigo:#4F46C8;--indigo-2:#6558E0;--ink:#1F1A45;--ink-2:#352F63;--ink-3:#5E5887;--ink-4:#8F8AB3;--mist:#F5F2FF;--paper:#FFFFFF;--dawn:#FFB454;--dawn-pale:#FFF3E0;--dawn-line:#F5A03A;--dusk-pale:#ECE8FF;--hope:#0F9D8A;--hope-pale:#DDF6F1;--rose:#E2528A;--warn:#B8610F;--warn-pale:#FFF1DF;--red:#B13A55;--red-pale:#FDECF0;--border:rgba(31,26,69,.09);--border-md:rgba(31,26,69,.15);--fd:'Newsreader',Georgia,'Times New Roman',serif;--fb:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-family:var(--fb);color:var(--ink);width:100%;display:flex;justify-content:center;padding:10px 0;font-size:14px;line-height:1.55}
 .lc-app-root *{box-sizing:border-box;margin:0;padding:0}
@@ -151,6 +150,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .sec-title{font-family:var(--fd);font-size:21px;font-weight:600;line-height:1.28;margin-bottom:6px;letter-spacing:-.1px;text-align:center}
 .sec-sub{font-size:13px;color:var(--ink-3);line-height:1.6;margin-bottom:18px;text-align:center}
 .proof-grid{display:flex;flex-direction:column;gap:14px;margin-bottom:10px}
+.proof-tag{display:block;width:max-content;max-width:100%;margin:0 auto 4px;font-size:11.5px;font-weight:600;color:var(--ink-3);background:var(--mist);border:1px solid var(--border-md);border-radius:6px;padding:3px 8px;text-align:center}
 .proof-card{background:var(--paper);border:1px solid var(--border-md);border-left:4px solid var(--dawn-line);border-radius:12px;padding:16px;font-family:var(--fd);font-style:italic;font-size:15px;line-height:1.55;color:var(--ink-2);position:relative}
 .proof-card::before{content:'🕊️';position:absolute;top:-12px;left:16px;background:var(--mist);border-radius:50%;padding:4px 6px;font-style:normal;font-size:14px;border:1px solid var(--border)}
 .proof-card strong{display:block;margin-top:12px;font-family:var(--fb);font-style:normal;font-size:12px;font-weight:700;color:var(--indigo)}
@@ -202,6 +202,10 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
 .legal-disclaimer strong{color:var(--ink-3)}
 .shell>.body>.legal-disclaimer:last-child{margin-bottom:60px}
 .chatting .sec{opacity:.3;transition:opacity .4s}
+.foot-nav{margin-top:26px;padding-top:18px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center}
+.foot-nav a{font-size:12.5px;font-weight:600;color:var(--indigo);text-decoration:none;padding:4px 2px}
+.foot-nav a:hover{text-decoration:underline}
+.legal-disclaimer a{color:var(--indigo);font-weight:600}
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:9999;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--border);transform:translateY(110%);visibility:hidden;transition:transform .35s,visibility 0s .35s}
 .sticky.show{transform:none;visibility:visible;transition-delay:0s}
 .sticky .btn-prim{max-width:408px;margin:0 auto;padding:12px 18px;font-size:14px}
@@ -232,7 +236,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         <h1 class="hero-title">Temukan Alasan Mengapa Doa Anda Terasa Berat Hari Ini</h1>
         <p class="hero-def">Kenali pola yang bisa memengaruhi cara Anda berdoa, menunggu, dan merespons ketika jawaban belum datang.</p>
         <button id="lc-start" class="btn-prim gold hero-cta" type="button" onclick="LC.open()">Buka Peta Doa Saya (3 menit)</button>
-        <p class="cta-note">Gratis, tanpa daftar akun, jawaban Anda rahasia.<br>Refleksi rohani, bukan diagnosis atau pengganti tenaga profesional.</p>
+        <p class="cta-note">Gratis, tanpa daftar akun. Jawaban baru dikirim jika Anda menyetujuinya di akhir.<br>Refleksi rohani, bukan diagnosis atau pengganti tenaga profesional. <a href="privasi.html" style="color:#FFB454;font-weight:600">Kebijakan Privasi</a></p>
         <div class="badge-row" id="lc-badges"><span class="bdg">100% gratis</span><span class="bdg">10 pernyataan</span><span class="bdg">Hasil via WhatsApp</span></div>
       </div>
     </div>
@@ -248,7 +252,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         <div class="scripture">"Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu."<span>Matius 11:28</span></div>
       </section>
 
-      <!-- THE GUIDE (Vell - REVISI COPYWRITING) -->
+      <!-- THE GUIDE (Vell) -->
       <section class="vell-intro">
          <img src="https://iili.io/nckS2qP.png" alt="Vell, Creator prayer.my.id" class="vell-photo" width="80" height="80" loading="lazy">
          <h3>Siapa di balik refleksi ini?</h3>
@@ -256,6 +260,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
          <p>Saya tumbuh dari keluarga <em>broken home</em>. Saya merawat kedua orang tua saya yang sakit hingga Tuhan memanggil mereka. Saya juga seorang <em>single parent</em> yang pernah merasa Tuhan begitu diam saat kehilangan istri karena sakit.</p>
          <p><strong>Saya membuat ruang ini karena saya tahu persis rasanya berada di posisi Anda.</strong></p>
          <button class="btn-prim" type="button" onclick="LC.open()">Mulai Refleksi Bersama Saya</button>
+         <p style="margin:12px 0 0;font-size:12.5px"><a href="tentang.html" style="color:#4F46C8;font-weight:600">Baca cerita Vell selengkapnya</a></p>
       </section>
 
       <!-- Chat kuis -->
@@ -272,18 +277,20 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         </div>
       </div>
 
-      <!-- Social Proof -->
+      <!-- Contoh ilustrasi (BUKAN testimoni nyata) -->
       <section class="sec proof-sec">
-        <h2 class="sec-title">Ruang Aman untuk Ribuan Jiwa</h2>
-        <p class="sec-sub">Anda tidak sendirian merasakan ini.</p>
+        <h2 class="sec-title">Ruang Aman untuk Refleksi Anda</h2>
+        <p class="sec-sub">Anda tidak sendirian merasakan ini. Berikut dua contoh ilustrasi perasaan yang sering muncul.</p>
         <div class="proof-grid">
           <div class="proof-card">
+            <span class="proof-tag">Contoh ilustrasi, bukan testimoni orang sungguhan</span>
             Saya pikir saya kehilangan iman, ternyata saya hanya kelelahan menunggu. Terima kasih Peta Doa ini, air mata saya tumpah merasakannya.
-            <strong>— Maria, Jakarta (The Waiting Heart)</strong>
+            <strong>— Contoh ilustrasi: Maria (The Waiting Heart)</strong>
           </div>
           <div class="proof-card">
+            <span class="proof-tag">Contoh ilustrasi, bukan testimoni orang sungguhan</span>
             Ternyata saya sulit melepaskan kendali, bukan kurang percaya Tuhan. Saya jadi tahu apa yang harus saya doakan malam ini.
-            <strong>— David, Surabaya (The Controlled Heart)</strong>
+            <strong>— Contoh ilustrasi: David (The Controlled Heart)</strong>
           </div>
         </div>
       </section>
@@ -323,7 +330,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
           <div class="step"><span>2</span><div><b>Terima Peta Doa seketika</b><p>Prayer Pattern, Inner Block, tiga pertanyaan refleksi, lalu ayat yang relevan.</p></div></div>
           <div class="step"><span>3</span><div><b>Terima laporan lengkap lewat WhatsApp</b><p>Laporan dikirim setelah Anda menekan tombol konfirmasi.</p></div></div>
         </div>
-        <p class="trust">Nomor WhatsApp hanya dipakai untuk mengirim laporan Anda. Tidak ada pembayaran, tidak ada langganan.</p>
+        <p class="trust">Nomor WhatsApp dipakai untuk mengirim laporan Anda. Tidak ada pembayaran, tidak ada langganan. Rincian data yang dikirim dijelaskan di <a href="privasi.html" style="color:#4F46C8;font-weight:600">Kebijakan Privasi</a>.</p>
         <button class="btn-prim sec-cta" type="button" onclick="LC.open()">Mulai Refleksi 3 Menit</button>
       </section>
 
@@ -348,15 +355,22 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
         </div>
       </section>
 
-      <div class="legal-disclaimer"><strong>Disclaimer:</strong> prayer.my.id adalah platform edukasi dan alat bantu refleksi diri. Hasilnya bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris, dan tidak menggantikan psikolog, psikiater, atau tenaga medis profesional. Jika Anda mengalami tekanan emosional berat atau krisis, segera hubungi profesional berlisensi atau layanan kesehatan jiwa 119 ext. 8.<br><br>Halaman ini memakai Facebook Pixel untuk mengukur iklan. Jawaban kuis tidak dikirim ke pihak ketiga.</div>
+      <nav class="foot-nav" aria-label="Menu halaman">
+        <a href="tentang.html">Tentang</a>
+        <a href="privasi.html">Privasi</a>
+        <a href="syarat.html">Syarat</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+
+      <div class="legal-disclaimer"><strong>Disclaimer:</strong> prayer.my.id adalah platform edukasi dan alat bantu refleksi diri. Hasilnya bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris, dan tidak menggantikan psikolog, psikiater, atau tenaga medis profesional. Jika Anda mengalami tekanan emosional berat atau krisis, segera hubungi profesional berlisensi atau layanan kesehatan jiwa 119 ext. 8.<br><br>Halaman ini memakai Facebook Pixel untuk mengukur iklan (lihat <a href="privasi.html">Kebijakan Privasi</a>). Testimoni pada halaman ini adalah contoh ilustrasi, bukan ulasan orang sungguhan.</div>
     </div>
   </div>
 </div>
 
-<!-- SCRIPT JS TETAP SAMA -->
 <script>
 (function () {
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxjc8VB-ZoNOseyvOm8hYaQR5bsvU_AICAFEKS1gLU9me80YvnmJreQp4Anwd4gYzFz/exec';
+  // Isi dengan kata sandi yang SAMA dengan yang dicek di Apps Script (lihat penjelasan). Kosong = tidak ada pengecekan.
   const API_SECRET = '';
   const SECRET_FIELD = 'secret';
   const MAX_USE = 2, WA_BUSINESS = '628595006988';
@@ -654,7 +668,7 @@ textarea.field-input:focus-visible,input.field-input:focus-visible{outline:none;
           '<div class="rep-field"><span class="rep-label">Jenis Kelamin *</span><div class="rep-radio"><label><input type="radio" name="lc-g" value="Male"> Pria</label><label><input type="radio" name="lc-g" value="Female"> Wanita</label></div></div>' +
           '<div class="rep-field"><label class="rep-label" for="lc-wa">Nomor WhatsApp Aktif *</label><input type="tel" id="lc-wa" class="field-input" inputmode="tel" placeholder="Contoh: 0812XXXXXXXX"></div>' +
           '<div class="rep-field"><label class="rep-label" for="lc-tgl">Tanggal Lahir *</label><input type="date" id="lc-tgl" class="field-input" max="' + todayISO() + '" value="' + esc(tglLahir) + '"><div class="rep-hint">Minimal usia 18 tahun.</div></div>' +
-          '<label class="rep-agree" for="lc-agree"><input type="checkbox" id="lc-agree"><span>Ya, saya bersedia menerima <strong>' + REPORT_PLAIN + '</strong> lewat WhatsApp, dan setuju data saya dikirim untuk menyusun laporan.</span></label>' +
+          '<label class="rep-agree" for="lc-agree"><input type="checkbox" id="lc-agree"><span>Ya, saya bersedia menerima <strong>' + REPORT_PLAIN + '</strong> lewat WhatsApp. Saya setuju nama panggilan, jenis kelamin, tanggal lahir, nomor WhatsApp, dan ringkasan jawaban saya (pola, skor, kode jawaban, serta komitmen yang saya tulis bila ada) dikirim dan disimpan menggunakan layanan Google, lalu dipakai untuk menyusun dan mengirim laporan lewat WhatsApp dengan bantuan penyedia layanan pesan pihak ketiga. Saya telah membaca <a href="privasi.html" target="_blank" rel="noopener" style="color:#4F46C8;font-weight:700">Kebijakan Privasi</a> dan <a href="syarat.html" target="_blank" rel="noopener" style="color:#4F46C8;font-weight:700">Syarat Penggunaan</a>.</span></label>' +
           '<div class="rep-err" id="lc-err" role="alert"></div>' +
           '<button type="button" class="btn-prim gold rep-send" id="lc-send">Simpan Data &amp; Lanjut ke WhatsApp</button>' +
           '<div class="legal-disclaimer">Laporan bersifat edukatif dan reflektif, bukan diagnosis psikologis, medis, atau psikiatris.</div></div>';
